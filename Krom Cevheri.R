@@ -19,4 +19,5 @@ ilavesile") +
     limits = c(0,220),
     breaks = c(0,20,40,60,80,100,120,140,160,180,200,220),
     label = c("0","20","40","60","80","100","120","140","160","180","200","TON")
-  )
+  ) +
+  annotate(geom="text", x=1930,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 10, fontface="italic")
