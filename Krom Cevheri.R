@@ -1,15 +1,18 @@
+library(ggplot2)
 tarih <- c(1923,1924,1925,1926,1927,1928,1929,1930,1931,1932,1933,1934,1935,1936,1937)
 miktar <- c(0,4,7,4,18,10,15,25,22,50,70,115,145,160,190)
 KromCevheri <- data.frame(tarih,miktar)
-ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3) + 
+ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) + 
   labs(caption=
-         "Üç sıfır 
-ilavesile") +
-  theme_bw() +
+         "Üç sıfır \nilavesile") +
+  theme_classic() +
+  theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(axis.title = element_blank()) +
-  theme(axis.text.x = element_text(angle = 90, face = "bold", size = 15)) +
+  theme(axis.text.x = element_text(angle = 90, face = "bold", size = 15, vjust = 0.5)) +
   theme(axis.text.y = element_text(face="bold", size=14)) +
-  theme(plot.caption = element_text(hjust=0, face="bold", size=13)) +
+  theme(axis.line.x = element_line(size = 2)) +
+  theme(axis.line.y = element_line(size = 1.5)) +
+  theme(plot.caption = element_text(hjust=0, face="bold.italic", size=13)) +
   scale_x_continuous(
     limits = c(1923,1937),
     breaks = c(1923,1924,1925,1926,1927,1928,1929,1930,1931,1932,1933,1934,1935,1936,1937),
@@ -20,4 +23,5 @@ ilavesile") +
     breaks = c(0,20,40,60,80,100,120,140,160,180,200,220),
     label = c("0","20","40","60","80","100","120","140","160","180","200","TON")
   ) +
+  annotate(geom="rect", xmin = 1924.1, xmax = 1936, ymin = 180, ymax = 199.1, fill = "white" ) +
   annotate(geom="text", x=1930,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 10, fontface="italic")
