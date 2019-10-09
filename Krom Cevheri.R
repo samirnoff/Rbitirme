@@ -13,15 +13,19 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
   theme(axis.line.x = element_line(size = 2)) +
   theme(axis.line.y = element_line(size = 1.5)) +
   theme(plot.caption = element_text(hjust=0, face="bold.italic", size=13)) +
+  theme(plot.margin = unit(c(2,1,1,1), "lines")) +
   scale_x_continuous(
-    limits = c(1923,1937),
+    limits = c(1922,1937),
     breaks = c(1923,1924,1925,1926,1927,1928,1929,1930,1931,1932,1933,1934,1935,1936,1937),
-    label = c("1923","   24","   25","   26","   27","   28","   29","1930","   31","   32","   33","   34","   35","   36","1937")
+    label = c("1923","   24","   25","   26","   27","   28","   29",
+              "1930","   31","   32","   33","   34","   35","   36","1937"),
+    expand = c(0,0)
   ) +
   scale_y_continuous(
     limits = c(0,220),
     breaks = c(0,20,40,60,80,100,120,140,160,180,200,220),
-    label = c("0","20","40","60","80","100","120","140","160","180","200","TON")
+    label = c("0","20","40","60","80","100","120","140","160","180","200","TON"),
+    expand = c(0,0)
   ) +
-  annotate(geom="rect", xmin = 1924.1, xmax = 1936, ymin = 180, ymax = 199.1, fill = "white" ) +
-  annotate(geom="text", x=1930,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 10, fontface="italic")
+  annotate(geom="rect", xmin = 1924.05, xmax = 1935.95, ymin = 181, ymax = 199, fill = "white" ) +
+  annotate(geom="text", x=1930,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 8.5, fontface="italic")
