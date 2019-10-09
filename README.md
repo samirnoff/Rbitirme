@@ -17,7 +17,7 @@ ggplot2
 
 1923 - 1937 yılları arasındaki krom cevheri üretimimizi gösteren grafiktir.
 
-```
+```R
 library(ggplot2)
 tarih <- c(1923,1924,1925,1926,1927,1928,1929,1930,1931,1932,1933,1934,1935,1936,1937)
 miktar <- c(0,4,7,4,18,10,15,25,22,50,70,115,145,160,190)
@@ -57,7 +57,7 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
 
 1932 - 1937 yılları arasındaki şarap satışını gösteren grafiktir.
 
-```
+```R
 library(ggplot2)
 tarih <- c(1932,1933,1934,1935,1936,1937)
 miktar <- c(52000,230000,200200,230000,715000,900000)
