@@ -51,7 +51,7 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
   annotate(geom="text", x=1930,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 8.5, fontface="italic")
 
 ```
-
+![Krom Cevheri İstihsâlimiz](https://github.com/samirnoff/Rbitirme/blob/master/KromCevheri.pdf)
 
 ### Şarap Satışı
 
@@ -88,3 +88,4 @@ ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
   )
 
 ```
+![Şarap Satışı](https://github.com/samirnoff/Rbitirme/blob/master/SarapSatisi.pdf)
