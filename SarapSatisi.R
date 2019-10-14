@@ -3,15 +3,15 @@ tarih <- c(1932,1933,1934,1935,1936,1937)
 miktar <- c(52000,230000,200200,230000,715000,900000)
 sarapsatisi <- data.frame(tarih,miktar)
 ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
-  labs(title = "Åžarap satÄ±ÅŸÄ±",
-       subtitle = "KÄ°LO") +
+  labs(title = "Þarap satýþý",
+       subtitle = "KÝLO") +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(plot.title = element_text(hjust = 0.5, size = 17, face = "bold.italic")) +
   theme(plot.subtitle = element_text(face = "bold.italic")) +
   theme(axis.title = element_blank()) +
-  theme(axis.text.x = element_text(size=15, face="bold", vjust = 0.5)) +
-  theme(axis.text.y = element_text(size=16, face="bold")) +
+  theme(axis.text.x = element_text(size=15, face="bold", vjust = 0.5, colour = "black")) +
+  theme(axis.text.y = element_text(size=16, face="bold", colour = "black")) +
   theme(axis.line = element_line(size=3)) +
   scale_x_continuous(
     limits = c(1932,1937.62),
