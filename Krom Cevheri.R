@@ -4,12 +4,12 @@ miktar <- c(0,4,7,4,18,10,15,25,22,50,70,115,145,160,190)
 KromCevheri <- data.frame(tarih,miktar)
 ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) + 
   labs(caption=
-         "ÃœÃ§ sÄ±fÄ±r \nilavesile") +
+         "Üç sıfır \nilavesile") +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(axis.title = element_blank()) +
-  theme(axis.text.x = element_text(angle = 90, face = "bold", size = 15, vjust = 0.5)) +
-  theme(axis.text.y = element_text(face="bold", size=14)) +
+  theme(axis.text.x = element_text(angle = 90, face = "bold", size = 15, vjust = 0.5, colour = "black")) +
+  theme(axis.text.y = element_text(face="bold", size=14, colour = "black")) +
   theme(axis.line.x = element_line(size = 2)) +
   theme(axis.line.y = element_line(size = 1.5)) +
   theme(plot.caption = element_text(hjust=0, face="bold.italic", size=13)) +
@@ -27,5 +27,5 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
     label = c("0","20","40","60","80","100","120","140","160","180","200","TON"),
     expand = c(0,0)
   ) +
-  annotate(geom="rect", xmin = 1924.05, xmax = 1935.95, ymin = 181, ymax = 199, fill = "white" ) +
-  annotate(geom="text", x=1930,y=190,label="KROM CEVHERÄ° Ä°STÄ°HSÃ‚LÄ°MÄ°Z", size= 8.5, fontface="italic")
+  annotate(geom="rect", xmin = 1924.05, xmax = 1934.95, ymin = 180.3, ymax = 199.8, fill = "white" ) +
+  annotate(geom="text", x=1929.5,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 9.3, fontface="italic")
