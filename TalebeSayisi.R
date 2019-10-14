@@ -6,14 +6,14 @@ ggplot(talebe, aes(tarih,miktar)) + geom_line(size=2) +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 0.75)) +
   labs(
-    title = expression(bold(paste(underline("ORTA Ã–GRETIM")))),
-    subtitle = "Ã–GRETMEN OKULU TALEBE SAYISI"
+    title = expression(bold(paste(underline("ORTA ÖÐRETÝM")))),
+    subtitle = "ÖGRETMEN OKULU TALEBE SAYISI"
   ) +
   theme(plot.title = element_text(size = 30, face="bold", hjust = 0)) +
   theme(plot.subtitle = element_text(size=30, face = "bold", hjust = 0.5)) +
   theme(axis.title = element_blank()) +
-  theme(axis.text.x = element_text(angle = 65, face = "bold", vjust = 1, hjust = 1.15, size = 10)) +
-  theme(axis.text.y = element_text(size = 14, face = "bold")) +
+  theme(axis.text.x = element_text(angle = 65, face = "bold", vjust = 1, hjust = 1.15, size = 10, colour = "black")) +
+  theme(axis.text.y = element_text(size = 14, face = "bold", colour = "black")) +
   theme(axis.line = element_line(size = 1)) + 
   scale_x_continuous(
     limits = c(1923,1937),
