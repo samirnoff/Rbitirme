@@ -1,10 +1,11 @@
+Sys.setlocale(locale = "Turkish")
 library(ggplot2)
 tarih <- c(1923,1924,1925,1926,1927,1928,1929,1930,1931,1932,1933,1934,1935,1936,1937)
 miktar <- c(0,4,7,4,18,10,15,25,22,50,70,115,145,160,190)
 KromCevheri <- data.frame(tarih,miktar)
 ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) + 
   labs(caption=
-         "Üç sýfýr \nilavesile") +
+         "ÃœÃ§ sÃ½fÃ½r \nilavesile") +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(axis.title = element_blank()) +
@@ -28,4 +29,4 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
     expand = c(0,0)
   ) +
   annotate(geom="rect", xmin = 1924.05, xmax = 1934.95, ymin = 180.3, ymax = 199.8, fill = "white" ) +
-  annotate(geom="text", x=1929.5,y=190,label="KROM CEVHERÝ ÝSTÝHSÂLÝMÝZ", size= 9.3, fontface="italic")
+  annotate(geom="text", x=1929.5,y=190,label="KROM CEVHERI Ä°STÄ°HSÃ‚LÄ°MÄ°Z", size= 9.3, fontface="italic")
