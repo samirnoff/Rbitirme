@@ -17,7 +17,7 @@ ggplot2
 
 1923 - 1937 yılları arasındaki krom cevheri üretimimizi gösteren grafiktir.
 
-```R
+```Sys.setlocale(locale = "Turkish")
 library(ggplot2)
 tarih <- c(1923,1924,1925,1926,1927,1928,1929,1930,1931,1932,1933,1934,1935,1936,1937)
 miktar <- c(0,4,7,4,18,10,15,25,22,50,70,115,145,160,190)
@@ -28,7 +28,7 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(axis.title = element_blank()) +
-  theme(axis.text.x = element_text(angle = 90, face = "bold", size = 15, vjust = 0.5)) +
+  theme(axis.text.x = element_text(angle = 90, face = "bold", size = 15, vjust = 0.5, colour = "black")) +
   theme(axis.text.y = element_text(face="bold", size=14, colour = "black")) +
   theme(axis.line.x = element_line(size = 2)) +
   theme(axis.line.y = element_line(size = 1.5)) +
@@ -47,10 +47,10 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
     label = c("0","20","40","60","80","100","120","140","160","180","200","TON"),
     expand = c(0,0)
   ) +
-  annotate(geom="rect", xmin = 1924.05, xmax = 1935.95, ymin = 181, ymax = 199, fill = "white" ) +
-  annotate(geom="text", x=1930,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 8.5, fontface="italic")
-
+  annotate(geom="rect", xmin = 1924.05, xmax = 1934.95, ymin = 180.3, ymax = 199.8, fill = "white" ) +
+  annotate(geom="text", x=1929.5,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 9.3, fontface="italic")
 ```
+
 ![Krom Cevheri İstihsâlimiz](https://github.com/samirnoff/Rbitirme/tree/master/Graph/KromCevheri.jpeg)
 
 ### Şarap Satışı
@@ -58,6 +58,7 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
 1932 - 1937 yılları arasındaki şarap satışını gösteren grafiktir.
 
 ```R
+Sys.setlocale(locale = "Turkish")
 library(ggplot2)
 tarih <- c(1932,1933,1934,1935,1936,1937)
 miktar <- c(52000,230000,200200,230000,715000,900000)
@@ -70,7 +71,7 @@ ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
   theme(plot.title = element_text(hjust = 0.5, size = 17, face = "bold.italic")) +
   theme(plot.subtitle = element_text(face = "bold.italic")) +
   theme(axis.title = element_blank()) +
-  theme(axis.text.x = element_text(size=15, face="bold", vjust = 0.5)) +
+  theme(axis.text.x = element_text(size=15, face="bold", vjust = 0.5, colour = "black")) +
   theme(axis.text.y = element_text(size=16, face="bold", colour = "black")) +
   theme(axis.line = element_line(size=3)) +
   scale_x_continuous(
@@ -86,7 +87,6 @@ ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
                "7          ","8          ","900000","1000000"),
     expand = c(0,0)
   )
-
 ```
 ![Şarap Satışı](https://github.com/samirnoff/Rbitirme/tree/master/Graph/SarapSatisi.jpeg)
 
@@ -95,6 +95,7 @@ ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
 1923 - 1938 tarihleri arasında orta öğretim seviyesindeki öğretmen okullarında bulunan öğrencilerin sayısını gösteren grafik
 
 ```R
+Sys.setlocale(locale = "Turkish")
 library(ggplot2)
 tarih <- seq(1923,1937)
 miktar <- c(2528,3771,4138,4558,5022,5749,5410,5536,5298,2059,2726,2477,2805,2699,2404)
@@ -103,13 +104,13 @@ ggplot(talebe, aes(tarih,miktar)) + geom_line(size=2) +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 0.75)) +
   labs(
-    title = expression(bold(paste(underline("ORTA ÖGRETIM")))),
+    title = expression(bold(paste(underline("ORTA ÖĞRETİM")))),
     subtitle = "ÖGRETMEN OKULU TALEBE SAYISI"
   ) +
   theme(plot.title = element_text(size = 30, face="bold", hjust = 0)) +
   theme(plot.subtitle = element_text(size=30, face = "bold", hjust = 0.5)) +
   theme(axis.title = element_blank()) +
-  theme(axis.text.x = element_text(angle = 65, face = "bold", vjust = 1, hjust = 1.15, size = 10)) +
+  theme(axis.text.x = element_text(angle = 65, face = "bold", vjust = 1, hjust = 1.15, size = 10, colour = "black")) +
   theme(axis.text.y = element_text(size = 14, face = "bold", colour = "black")) +
   theme(axis.line = element_line(size = 1)) + 
   scale_x_continuous(
