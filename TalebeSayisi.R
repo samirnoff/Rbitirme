@@ -1,3 +1,4 @@
+Sys.setlocale(locale = "Turkish")
 library(ggplot2)
 tarih <- seq(1923,1937)
 miktar <- c(2528,3771,4138,4558,5022,5749,5410,5536,5298,2059,2726,2477,2805,2699,2404)
@@ -6,8 +7,8 @@ ggplot(talebe, aes(tarih,miktar)) + geom_line(size=2) +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 0.75)) +
   labs(
-    title = expression(bold(paste(underline("ORTA ÖÐRETÝM")))),
-    subtitle = "ÖGRETMEN OKULU TALEBE SAYISI"
+    title = expression(bold(paste(underline("ORTA Ã–ÄžRETÄ°M")))),
+    subtitle = "Ã–GRETMEN OKULU TALEBE SAYISI"
   ) +
   theme(plot.title = element_text(size = 30, face="bold", hjust = 0)) +
   theme(plot.subtitle = element_text(size=30, face = "bold", hjust = 0.5)) +
