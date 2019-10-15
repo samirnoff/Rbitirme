@@ -5,7 +5,7 @@ miktar <- c(0,4,7,4,18,10,15,25,22,50,70,115,145,160,190)
 KromCevheri <- data.frame(tarih,miktar)
 ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) + 
   labs(caption=
-         "Üç sýfýr \nilavesile") +
+         "Üç sıfır \nilavesile") +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(axis.title = element_blank()) +
