@@ -34,7 +34,7 @@ scale_x_continuous(
     expand = c(0,0)
   ) +
   annotate(geom="rect", xmin = 1925.1, xmax = 1930.5, ymin = 53500, ymax = 60000, fill = "white" ) +
-  annotate(geom="text", x=1928.5,y=58000,label="Muayene Sayýsý", size= 5, fontface="bold.italic") +
+  annotate(geom="text", x=1928.5,y=58000,label="Muayene Sayısı", size= 5, fontface="bold.italic") +
   annotate(geom="rect", xmin = 1925.5, xmax = 1926.5, ymin = 57900, ymax = 58000, fill = "black" ) +
   annotate(geom="text", x=1928.5,y=55000,label="İlaçlananlar  \" ", size= 5, fontface="bold.italic") +
   annotate(geom="text", x=1926,y=55000,label="- - - - ", size= 5, fontface="bold")
