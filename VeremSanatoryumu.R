@@ -1,3 +1,4 @@
+Sys.setlocale(locale = "Turkish")
 library(ggplot2)
 tarih <- seq(1924,1937)
 miktar <- c(20,120,110,90,89,120,125,133,130,207,240,265,290,290)
@@ -6,9 +7,9 @@ verem <- data.frame(tarih,miktar,miktar2)
 ggplot(verem, aes(x=tarih)) +
   geom_line(aes(y=miktar), size=1.3) + geom_point(aes(y=miktar), size=3)+
   geom_line(aes(y=miktar2), size=1.3, linetype="dashed") + geom_point(aes(y=miktar2), size=3) +
-  labs(title = "HEYBELÝADA VEREM SANATORYUMU MESAÝSÝ
+  labs(title = "HEYBELÄ°ADA VEREM SANATORYUMU MESAÄ°SÄ°
   1924 \U2013 1937",
-       subtitle = "Yarým Lugaritmik Diyaðram") +
+       subtitle = "YarÄ±m Lugaritmik DiyaÄŸram") +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(plot.title = element_text(hjust = 0.5, size = 17, face = "bold")) +
@@ -32,7 +33,7 @@ ggplot(verem, aes(x=tarih)) +
     expand = c(0,0)
   ) +
   annotate(geom="rect", xmin = 1925.1, xmax = 1930.9, ymin = 540, ymax = 620, fill = "white" ) +
-  annotate(geom="text", x=1928.2,y=590,label="Yatýrýlarak tedavi", size= 4.7, fontface="bold.italic") +
+  annotate(geom="text", x=1928.2,y=590,label="YatÄ±rÄ±larak tedavi", size= 4.7, fontface="bold.italic") +
   annotate(geom="rect", xmin = 1925.5, xmax = 1926.5, ymin = 588, ymax = 590, fill = "black" ) +
   annotate(geom="text", x=1928.8,y=560,label="Laboratuvar ve Rontken ", size= 4.7, fontface="bold.italic") +
   annotate(geom="text", x=1926.1,y=560,label="- - - -  ", size= 6, fontface="bold")
