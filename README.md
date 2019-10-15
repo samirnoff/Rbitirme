@@ -106,7 +106,7 @@ ggplot(talebe, aes(tarih,miktar)) + geom_line(size=2) +
   theme(panel.grid.major = element_line(colour = "black", size = 0.75)) +
   labs(
     title = expression(bold(paste(underline("ORTA ÖĞRETİM")))),
-    subtitle = "ÖGRETMEN OKULU TALEBE SAYISI"
+    subtitle = "ÖĞRETMEN OKULU TALEBE SAYISI"
   ) +
   theme(plot.title = element_text(size = 30, face="bold", hjust = 0)) +
   theme(plot.subtitle = element_text(size=30, face = "bold", hjust = 0.5)) +
