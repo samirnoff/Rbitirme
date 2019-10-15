@@ -1,3 +1,4 @@
+Sys.setlocale(locale = "Turkish")
 library(ggplot2)
 tarih <- seq(1925,1937)
 miktar <- c(3000,14500,7000,14500,9000,21500,17500,18500,20800,23500,21700,24000,24500)
@@ -6,7 +7,7 @@ trahommucadele <- data.frame(tarih,miktar,miktar2)
 ggplot(trahommucadele, aes(x=tarih)) +
   geom_line(aes(y=miktar), size=1.3) + geom_point(aes(y=miktar), size=3)+
   geom_line(aes(y=miktar2), size=1.3, linetype="dashed") + geom_point(aes(y=miktar2), size=2) +
-  labs(title = "TRAHOM MÜCADELE TEÞKÝLÂTI",
+  labs(title = "TRAHOM MÃœCADELE TEÅžKÄ°LÃ‚TI",
        subtitle = "Hastane ve Dispanserler Faaliyeti
        ",
        caption = "1925 \u2013 1937") +
@@ -33,8 +34,8 @@ scale_x_continuous(
     expand = c(0,0)
   ) +
   annotate(geom="rect", xmin = 1925.1, xmax = 1930.5, ymin = 53500, ymax = 60000, fill = "white" ) +
-  annotate(geom="text", x=1928.5,y=58000,label="Muayene Sayýsý", size= 5, fontface="bold.italic") +
+  annotate(geom="text", x=1928.5,y=58000,label="Muayene SayÃ½sÃ½", size= 5, fontface="bold.italic") +
   annotate(geom="rect", xmin = 1925.5, xmax = 1926.5, ymin = 57900, ymax = 58000, fill = "black" ) +
-  annotate(geom="text", x=1928.5,y=55000,label="Ýlaçlananlar  \" ", size= 5, fontface="bold.italic") +
+  annotate(geom="text", x=1928.5,y=55000,label="Ä°laÃ§lananlar  \" ", size= 5, fontface="bold.italic") +
   annotate(geom="text", x=1926,y=55000,label="- - - - ", size= 5, fontface="bold")
   
