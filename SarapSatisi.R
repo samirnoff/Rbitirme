@@ -1,10 +1,11 @@
+Sys.setlocale(locale = "Turkish")
 library(ggplot2)
 tarih <- c(1932,1933,1934,1935,1936,1937)
 miktar <- c(52000,230000,200200,230000,715000,900000)
 sarapsatisi <- data.frame(tarih,miktar)
 ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
-  labs(title = "Þarap satýþý",
-       subtitle = "KÝLO") +
+  labs(title = "Åžarap satÄ±ÅŸÄ±",
+       subtitle = "KÄ°LO") +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(plot.title = element_text(hjust = 0.5, size = 17, face = "bold.italic")) +
