@@ -29,4 +29,4 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
     expand = c(0,0)
   ) +
   annotate(geom="rect", xmin = 1924.05, xmax = 1934.95, ymin = 180.3, ymax = 199.8, fill = "white" ) +
-  annotate(geom="text", x=1929.5,y=190,label="KROM CEVHERI İSTİHSÂLİMİZ", size= 9.3, fontface="italic")
+  annotate(geom="text", x=1929.5,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 9.3, fontface="italic")
