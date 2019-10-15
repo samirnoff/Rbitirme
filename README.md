@@ -29,7 +29,7 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(axis.title = element_blank()) +
   theme(axis.text.x = element_text(angle = 90, face = "bold", size = 15, vjust = 0.5)) +
-  theme(axis.text.y = element_text(face="bold", size=14)) +
+  theme(axis.text.y = element_text(face="bold", size=14, colour = "black")) +
   theme(axis.line.x = element_line(size = 2)) +
   theme(axis.line.y = element_line(size = 1.5)) +
   theme(plot.caption = element_text(hjust=0, face="bold.italic", size=13)) +
@@ -71,7 +71,7 @@ ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
   theme(plot.subtitle = element_text(face = "bold.italic")) +
   theme(axis.title = element_blank()) +
   theme(axis.text.x = element_text(size=15, face="bold", vjust = 0.5)) +
-  theme(axis.text.y = element_text(size=16, face="bold")) +
+  theme(axis.text.y = element_text(size=16, face="bold", colour = "black")) +
   theme(axis.line = element_line(size=3)) +
   scale_x_continuous(
     limits = c(1932,1937.62),
@@ -110,7 +110,7 @@ ggplot(talebe, aes(tarih,miktar)) + geom_line(size=2) +
   theme(plot.subtitle = element_text(size=30, face = "bold", hjust = 0.5)) +
   theme(axis.title = element_blank()) +
   theme(axis.text.x = element_text(angle = 65, face = "bold", vjust = 1, hjust = 1.15, size = 10)) +
-  theme(axis.text.y = element_text(size = 14, face = "bold")) +
+  theme(axis.text.y = element_text(size = 14, face = "bold", colour = "black")) +
   theme(axis.line = element_line(size = 1)) + 
   scale_x_continuous(
     limits = c(1923,1937),
