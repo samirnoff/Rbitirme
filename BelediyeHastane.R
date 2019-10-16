@@ -20,7 +20,7 @@ labell <- c("12.188","12.746","12.810","15.625","14.600","15.757","17.121","17.2
 
 ggplot(data=data,aes(x=factor(zaman), y=deger, fill=grup, color=grup, alpha=grup)) +
   scale_x_discrete(breaks=c(1928,1929,1930,1931,1932,1933,1934,1935,1936,1937))+
-  geom_bar(stat="identity",position ="identity",color="black", size=1.5, width=0.8) +
+  geom_bar(stat="identity",position ="identity",color="black", size=1.5, width=0.65) +
   ggtitle("BELEDIYELERE AIT HASTANELER MESAISI \n 1928\u20131937")+
   theme_classic()+
   scale_fill_manual(values=c("black","white")) +
