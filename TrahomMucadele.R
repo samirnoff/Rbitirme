@@ -1,5 +1,3 @@
-
-
 Sys.setlocale(locale = "Turkish")
 library(ggplot2)
 tarih <- seq(1925,1937)
@@ -10,24 +8,24 @@ ggplot(trahommucadele, aes(x=tarih)) +
   geom_line(aes(y=miktar), size=1.3) + geom_point(aes(y=miktar), size=3)+
   geom_line(aes(y=miktar2), size=1.3, linetype="dashed") + geom_point(aes(y=miktar2), size=2) +
   labs(title = "TRAHOM MÜCADELE TEŞKİLÂTI",
-       subtitle = "Hastane ve Dispanserler Faaliyeti
-       ",
+       subtitle = "Hastane ve Dispanserler Faaliyeti\n",
        caption = "1925 \u2013 1937") +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(plot.title = element_text(hjust = 0.5, size = 17, face = "bold")) +
   theme(plot.subtitle = element_text(hjust = 0.5, size = 17, face = "bold.italic")) +
   theme(axis.title = element_blank())  +
-  theme(plot.caption = element_text(hjust = 0.5, vjust = 149, face = "bold", size = 17)) +
+  theme(plot.caption = element_text(hjust = 0.5, vjust = 157, face = "bold", size = 17)) +
   theme(axis.text.x = element_text(size=15, face="bold",hjust = 0.7, vjust = 0.5, angle = 89.9, colour = "black")) +
   theme(axis.text.y = element_text(size=12, face="bold", colour = "black")) +
   theme(axis.line.x = element_line(size = 1.4)) +
   theme(axis.line.y = element_line(size = 1.4)) +
   
   scale_x_continuous(
-    limits = c(1925,1937.5),
+    limits = c(1925,1937),
     breaks = seq(1925,1937),
-    labels = c("1925","1926","1927","1928","1929","1930","1931","1932","1933","1934","1935","1936","1937")
+    labels = c("1925","1926","1927","1928","1929","1930","1931","1932","1933","1934","1935","1936","1937"),
+    expand = c(0,0.3)
   ) +
   scale_y_continuous(
     limits = c(0,61000),
@@ -40,4 +38,3 @@ ggplot(trahommucadele, aes(x=tarih)) +
   annotate(geom="rect", xmin = 1925.5, xmax = 1926.5, ymin = 57900, ymax = 58000, fill = "black" ) +
   annotate(geom="text", x=1928.5,y=55000,label="İlaçlananlar  \" ", size= 5, fontface="bold.italic") +
   annotate(geom="text", x=1926,y=55000,label="- - - - ", size= 5, fontface="bold")
-
