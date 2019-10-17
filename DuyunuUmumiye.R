@@ -11,13 +11,13 @@ ggplot(duyunu, aes(tarih)) +
   labs(title = "Duyunu Umumiye ve Devlet İnhisarı
          Zamanlarındaki safi içki varidatı") +
   theme_classic() +
-  theme(panel.grid.major = element_line(colour = "black", size = 1)) +
+  theme(panel.grid.major = element_line(colour = "black", size = 0.7)) +
   theme(plot.title = element_text(hjust = 0.5, size = 25, face = "bold.italic")) +
   theme(axis.title = element_blank())  +
   theme(axis.text.x = element_text(size=15, face="bold", vjust = -0.3, angle = 90, colour = "black")) +
-  theme(axis.text.y = element_text(size=15, face="bold", vjust = 0, colour = "black")) +
-  theme(axis.line.x = element_line(size = 2)) +
-  theme(axis.line.y = element_line(size = 1.5)) +
+  theme(axis.text.y = element_text(size=14, face="bold", vjust = 0, colour = "black")) +
+  theme(axis.line.x = element_line(size = 3)) +
+  theme(axis.line.y = element_line(size = 2)) +
   scale_x_continuous(
     limits = c(1901,1926),
     breaks = seq(1902,1926),
@@ -33,7 +33,7 @@ ggplot(duyunu, aes(tarih)) +
                "6          ","8          ","5000000","2          ","4          ","6          ","8          ","6000000","2          ",
                "lira cari    "," "," "," "),
     expand = c(0,0)
-    ) +
-  annotate(geom="text", x=1913.5,y=6900000,label= " \"1 altın lira   10,60 carilira\" ", size= 5, fontface="bold.italic") +
-  annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6740000, ymax = 6770000, fill = "black" ) +
-  annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6700000, ymax = 6730000, fill = "black" ) 
+  ) +
+  annotate(geom="text", x=1914,y=6900000,label= " ,, 1 altın lira    10,60 carilira,, ", size= 5, fontface="bold.italic") +
+  annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6775000, ymax = 6790000, fill = "black" ) +
+  annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6745000, ymax = 6760000, fill = "black" ) 
