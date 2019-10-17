@@ -15,11 +15,11 @@ ggplot(verem, aes(x=tarih)) +
   theme(plot.title = element_text(hjust = 0.5, size = 17, face = "bold")) +
   theme(plot.subtitle = element_text(hjust = 0.5, size = 17, face = "bold.italic")) +
   theme(axis.title = element_blank())  +
-  theme(axis.text.x = element_text(size=15, face="bold", vjust = 0.7, hjust = 1.2, angle = 90, colour = "black")) +
-  theme(axis.text.y = element_text(size=12, face="bold", colour = "black")) +
+  theme(axis.text.x = element_text(size=15,  vjust = 0.7, hjust = 1, angle = 89.9, colour = "black")) +
+  theme(axis.text.y = element_text(size=12,  colour = "black")) +
   theme(axis.line.x = element_line(size = 1.4)) +
   theme(axis.line.y = element_line(size = 1.4)) +
-  
+  theme(plot.margin = unit(c(1,1,1,2), "lines")) +
   scale_x_continuous(
     limits = c(1924,1937),
     breaks = seq(1924,1937),
