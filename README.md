@@ -51,7 +51,7 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
   annotate(geom="text", x=1929.5,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 9.3, fontface="italic")
 ```
 
-![Krom Cevheri İstihsâlimiz](https://github.com/samirnoff/Rbitirme/tree/master/Graph/KromCevheri.jpeg)
+![Krom Cevheri İstihsâlimiz](https://github.com/samirnoff/Rbitirme/blob/master/Graph/KromCevheri.jpeg)
 
 ### Şarap Satışı
 
@@ -88,11 +88,11 @@ ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
     expand = c(0,0)
   )
 ```
-![Şarap Satışı](https://github.com/samirnoff/Rbitirme/tree/master/Graph/SarapSatisi.jpeg)
+![Şarap Satışı](https://github.com/samirnoff/Rbitirme/blob/master/Graph/SarapSatisi.jpeg)
 
 ### Orta Öğretim Öğretmen Okulu Talebe Sayısı
 
-1923 - 1938 tarihleri arasında orta öğretim seviyesindeki öğretmen okullarında bulunan öğrencilerin sayısını gösteren grafik
+1923 - 1938 yılları arasında orta öğretim seviyesindeki öğretmen okullarında bulunan öğrencilerin sayısını gösteren grafiktir.
 
 ```R
 Sys.setlocale(locale = "Turkish")
@@ -148,11 +148,11 @@ ggplot(talebe, aes(tarih,miktar)) + geom_line(size=2) +
   annotate(geom = "text", x = 1936.5, y = 2750, label = "2699", fontface = "bold")
   ```
   
-  ![Talebe Sayısı](https://github.com/samirnoff/Rbitirme/tree/master/Graph/TalebeSayisi.jpeg)
+  ![Talebe Sayısı](https://github.com/samirnoff/Rbitirme/blob/master/Graph/TalebeSayisi.jpeg)
   
   ### Trahom Mücadele Teşkilâtı - Hastane ve Dispanserler Faaliyeti
   
-  1925 - 1937 yılları arasında Trahom hastalığına karşı kurulan hastane ve dispanserlerin faaliyetlerini gösteren grafik
+  1925 - 1937 yılları arasında Trahom hastalığına karşı kurulan hastane ve dispanserlerin faaliyetlerini gösteren grafiktir.
   
   ```R
   Sys.setlocale(locale = "Turkish")
@@ -200,7 +200,7 @@ ggplot(trahommucadele, aes(x=tarih)) +
   
   ### Heybeliada Verem Sanatoryumu Mesaisi
   
-  1924 - 1937 yılları arasında Heybeliada Verem Sanatoryumu tarafından yapılan tedavi ve çalışmaları gösteren grafik
+  1924 - 1937 yılları arasında Heybeliada Verem Sanatoryumu tarafından yapılan tedavi ve çalışmaları gösteren grafiktir.
   
   ```R
   Sys.setlocale(locale = "Turkish")
