@@ -4,10 +4,10 @@ Bu projenin amacı, Türkiye Cumhuriyeti'nin ilk yıllarında çeşitli verileri
 
 ## Kullanılan Kütüphaneler
 
-Projede yalnızca ggplot2 kütüphanesi kullanılmıştır.
+Projede yalnızca R ggplot2 kütüphanesi kullanılmıştır.
 
 ```
-ggplot2
+library(ggplot2)
 ```
 
 ## Çalışmalarımız
