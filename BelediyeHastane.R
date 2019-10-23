@@ -4,8 +4,8 @@ yatak <- c(12188,12746,12810,15625,14600,15757,17121,17213,18004,18193)
 tedavi <- c(30774,30670,34689,57285,66959,84625,126324,145483,159853,177075)
 zaman <- rep(seq(1928,1937),2)
 deger <- c(yatak,tedavi) 
-grup <- factor(c(rep(c("Yatakda tedavi sayisi", "Ayakda       \"           \" "), each=length(yatak))),
-               levels=c("Yatakda tedavi sayisi", "Ayakda       \"           \" "))
+grup <- factor(c(rep(c("Yatakda tedavi sayısı", "Ayakda       \"           \" "), each=length(yatak))),
+               levels=c("Yatakda tedavi sayısı", "Ayakda       \"           \" "))
 data <- data.frame("x"=zaman, "y"=deger, "grp"=grup)
 bold.text <- element_text(face = "bold", color = "black", size = 12)
 xcor <- rep(paste(c(seq(1928,1937)),sep=""),2)
