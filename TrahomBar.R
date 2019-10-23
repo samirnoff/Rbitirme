@@ -4,8 +4,8 @@ yatak <- c(64,298,581,312,312,425,1257,1644,2073,2215,2215,2332,2579)
 tedavi <- c(99,642,909,646,702,2694,2418,4287,4212,4318,3719,4034,4916)
 zaman <- rep(seq(1925,1937),2)
 deger <- c(yatak,tedavi)  
-grup <- factor(c(rep(c("Yatırılarak tedavi sayısı", "Yapılan ameliyat       \" "), each=length(yatak))),
-               levels=c("Yatırılarak tedavi sayısı", "Yapılan ameliyat       \" "))
+grup <- factor(c(rep(c("YatÄ±rÄ±larak tedavi sayÄ±sÄ±", "YapÄ±lan ameliyat       \" "), each=length(yatak))),
+               levels=c("YatÄ±rÄ±larak tedavi sayÄ±sÄ±", "YapÄ±lan ameliyat       \" "))
 data <- data.frame("x"=zaman, "y"=deger, "grp"=grup) 
 text <- element_text(face = "bold", color = "black", size = 12)
 xcor <- rep(paste(c(seq(1925,1937)),sep=""),2)
@@ -15,7 +15,7 @@ labell <- c("64","298","581","312","312","425"," 1.257"," 1.644","  2.073","  2.
 labell2 <- c("","","","","","","","","","","","","","","","","","","","","4.287","4.212","4.318","3.719","4.034","4.916")
 
 ggplot(data=data,aes(x=factor(zaman), y=deger, fill=grup, color=grup, alpha=grup)) +
-  labs(title = "TRAHOM MÜCADELE TEŞKİLÂTI",
+  labs(title = "TRAHOM MÃœCADELE TEÅKÄ°LÃ‚TI",
        subtitle = "Hastane ve Dispanserler Faaliyeti\n",
        caption = "1925 \u2013 1937")+
   geom_bar(stat="identity",position ="identity",color="black", size=1.25, width=0.65) +
