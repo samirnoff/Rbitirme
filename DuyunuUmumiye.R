@@ -18,6 +18,7 @@ ggplot(duyunu, aes(tarih)) +
   theme(axis.text.y = element_text(size=14, face="bold", vjust = 0, colour = "black")) +
   theme(axis.line.x = element_line(size = 3)) +
   theme(axis.line.y = element_line(size = 2)) +
+  coord_cartesian(clip = 'off') +
   scale_x_continuous(
     limits = c(1901,1926),
     breaks = seq(1902,1926),
@@ -31,9 +32,11 @@ ggplot(duyunu, aes(tarih)) +
     labels = c("1000000","2          ","4          ","6          ","8          ","2000000","2          ","4          ","6          ",
                "8          ","3000000","2          ","4          ","6          ","8          ","4000000","2          ","4          ",
                "6          ","8          ","5000000","2          ","4          ","6          ","8          ","6000000","2          ",
-               "lira cari    "," "," "," "),
+               ""," "," "," "),
     expand = c(0,0)
   ) +
-  annotate(geom="text", x=1914,y=6900000,label= " ,, 1 altın lira    10,60 carilira,, ", size= 5, fontface="bold.italic") +
+  annotate(geom="text", x=1913.5,y=6900000,label= " ,, 1 altın lira    10,60 carilira,, ", size= 5, fontface="bold.italic") +
+  annotate(geom="text", x=1902, y=6500000, label="lira cari",fontface="italic", hjust=2.4, size= 4) +
   annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6775000, ymax = 6790000, fill = "black" ) +
-  annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6745000, ymax = 6760000, fill = "black" ) 
+  annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6745000, ymax = 6760000, fill = "black" )
+  
