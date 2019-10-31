@@ -36,7 +36,7 @@ ggplot(duyunu, aes(tarih)) +
     expand = c(0,0)
   ) +
   annotate(geom="text", x=1913.5,y=6900000,label= " ,, 1 altın lira    10,60 carilira,, ", size= 5, fontface="bold.italic") +
-  annotate(geom="text", x=1902, y=6500000, label="lira cari",fontface="italic", hjust=2.4, size= 4) +
+  annotate(geom="text", x=1902, y=6500000, label="lira cari",fontface="bold.italic", hjust=2.6, size= 3) +
   annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6775000, ymax = 6790000, fill = "black" ) +
   annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6745000, ymax = 6760000, fill = "black" )
   
