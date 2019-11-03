@@ -39,6 +39,7 @@ ggplot(data=data,aes(x=factor(zaman), y=deger, fill=grup, color=grup, alpha=grup
   coord_cartesian(clip = 'off')
 
 ## An alternative solution
+
   Sys.setlocale(locale = "Turkish")
   library(ggplot2)
   yatak <- c(598,701,523,376,568,687,774,777,815,1031,1223,1374,1528,1733)
@@ -61,9 +62,9 @@ ggplot(data=data,aes(x=factor(zaman), y=deger, fill=grup, color=grup, alpha=grup
 
   ggplot(data=data2,aes(x=factor(zaman))) +
   ggtitle("ZONGULDAK HASTANESİNİN FAALİYETİ \n                    1924 \u2013 1937")+
-  geom_bar(aes(y=y1,fill="black"),stat= "identity", col = "black")+
-  geom_bar(aes(y=y2,fill="white"),stat= "identity", col = "black")+
-  geom_bar(aes(y=y3),stat= "identity", col = "black", fill="black")+
+  geom_bar(aes(y=y1,fill="black"),stat= "identity", col = "black", size=1)+
+  geom_bar(aes(y=y2,fill="white"),stat= "identity", col = "black", size=1)+
+  geom_bar(aes(y=y3),stat= "identity", col = "black", fill="black", size=1)+
     theme_classic()+
   scale_fill_manual(name = "",
                     values=c("black", "white"),
