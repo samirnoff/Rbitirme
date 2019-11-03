@@ -38,7 +38,7 @@ ggplot(data=data,aes(x=factor(zaman), y=deger, fill=grup, color=grup, alpha=grup
   guides(fill=guide_legend(keywidth=0.78,keyheight=0.30,default.unit="inch")) +
   coord_cartesian(clip = 'off')
 
-## An alternatice solution
+## An alternative solution
   Sys.setlocale(locale = "Turkish")
   library(ggplot2)
   yatak <- c(598,701,523,376,568,687,774,777,815,1031,1223,1374,1528,1733)
