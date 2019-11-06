@@ -49,7 +49,7 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
   annotate(geom="text", x=1929.5,y=190,label="KROM CEVHERİ İSTİHSÂLİMİZ", size= 9.3, fontface="italic") +
   annotate(geom="text", x=1922, y=0, label="Üç sfır\nilavesile",fontface="bold.italic", hjust=1, vjust=1.8) +
   annotate(geom="text", x=1922, y=220, label=expression(bold(underline("TON"))), hjust=1.15, vjust=0.2, size=5) +
-  annotate(geom="segment",x=1922.13,xend=1922.13, y=0,yend=220,colour="black") +
+  annotate(geom="segment",x=1922.13,xend=1922.13, y=0,yend=220,colour="black",size=1) +
   annotate(geom="rect", xmin = 1922, xmax = 1922.13, ymin = 20, ymax = 40, fill = "black") +
   annotate(geom="rect", xmin = 1922, xmax = 1922.13, ymin = 60, ymax = 80, fill = "black") +
   annotate(geom="rect", xmin = 1922, xmax = 1922.13, ymin = 100, ymax = 120, fill = "black") +

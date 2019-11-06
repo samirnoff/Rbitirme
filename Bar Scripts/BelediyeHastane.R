@@ -4,8 +4,8 @@ yatak <- c(12188,12746,12810,15625,14600,15757,17121,17213,18004,18193)
 tedavi <- c(30774,30670,34689,57285,66959,84625,126324,145483,159853,177075)
 zaman <- rep(seq(1928,1937),2)
 deger <- c(yatak,tedavi) 
-grup <- factor(c(rep(c("Yatakda tedavi sayÄ±sÄ±", "Ayakda       \"           \" "), each=length(yatak))),
-               levels=c("Yatakda tedavi sayÄ±sÄ±", "Ayakda       \"           \" "))
+grup <- factor(c(rep(c("Yatakda tedavi sayısı", "Ayakda       \"           \" "), each=length(yatak))),
+               levels=c("Yatakda tedavi sayısı", "Ayakda       \"           \" "))
 data <- data.frame("x"=zaman, "y"=deger, "grp"=grup)
 bold.text <- element_text(face = "bold", color = "black", size = 12)
 xcor <- rep(paste(c(seq(1928,1937)),sep=""),2)
@@ -15,7 +15,7 @@ labell <- c("12.188","12.746","12.810","15.625","14.600","15.757","17.121","17.2
 
 
 ggplot(data=data,aes(x=factor(zaman), y=deger, fill=grup, color=grup, alpha=grup)) +
-  ggtitle("BELEDiYELERE AiT HASTANELER MESAÄ°SÄ° \n 1928\u20131937")+
+  ggtitle("BELEDiYELERE AiT HASTANELER MESAİSİ \n 1928\u20131937")+
   geom_bar(stat="identity",position ="identity",color="black", size=1.25, width=0.65) +
   theme_classic()+
   scale_fill_manual(values=c("black","white")) +

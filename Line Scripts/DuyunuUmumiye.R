@@ -8,8 +8,8 @@ duyunu <- data.frame(tarih,miktar,tarih2,miktar2)
 ggplot(duyunu, aes(tarih)) +
   geom_line(aes(y=miktar), size=1.3) + geom_point(aes(y=miktar), size=2) +
   geom_line(aes(x=tarih2, y=miktar2), linetype="dashed",size=1.3)+
-  labs(title = "Duyunu Umumiye ve Devlet Ä°nhisarÄ±
-         ZamanlarÄ±ndaki safi iÃ§ki varidatÄ±") +
+  labs(title = "Duyunu Umumiye ve Devlet İnhisarı
+         Zamanlarındaki safi içki varidatı") +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 0.7)) +
   theme(plot.title = element_text(hjust = 0.5, size = 25, face = "bold.italic")) +
@@ -35,8 +35,7 @@ ggplot(duyunu, aes(tarih)) +
                ""," "," "," "),
     expand = c(0,0)
   ) +
-  annotate(geom="text", x=1913.5,y=6900000,label= " ,, 1 altÄ±n lira    10,60 carilira,, ", size= 5, fontface="bold.italic") +
+  annotate(geom="text", x=1913.5,y=6900000,label= " ,, 1 altın lira    10,60 carilira,, ", size= 5, fontface="bold.italic") +
   annotate(geom="text", x=1902, y=6500000, label="lira cari",fontface="bold.italic", hjust=2.6, size= 3) +
   annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6775000, ymax = 6790000, fill = "black" ) +
   annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6745000, ymax = 6760000, fill = "black" )
-  

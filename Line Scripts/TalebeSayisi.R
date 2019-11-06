@@ -10,8 +10,8 @@ ggplot(talebe, aes(tarih,miktar)) + geom_line(size=2) +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 0.75)) +
   labs(
-    title = expression(bold(paste(underline("ORTA Ã–ÄžRETÄ°M")))),
-    subtitle = "Ã–ÄžRETMEN OKULU TALEBE SAYISI"
+    title = expression(bold(paste(underline("ORTA ÖÐRETÝM")))),
+    subtitle = "ÖÐRETMEN OKULU TALEBE SAYISI"
   ) +
   theme(plot.title = element_text(size = 30, face="bold", hjust = 0)) +
   theme(plot.subtitle = element_text(size=30, face = "bold", hjust = 0.5)) +

@@ -4,7 +4,7 @@ tarih <- c(1932,1933,1934,1935,1936,1937)
 miktar <- c(52000,230000,200200,230000,715000,900000)
 sarapsatisi <- data.frame(tarih,miktar)
 ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
-  labs(title = "Åžarap satÄ±ÅŸÄ±\n\n") +
+  labs(title = "Þarap satýþý\n\n") +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(plot.title = element_text(hjust = 0.5, size = 17, face = "bold.italic")) +
@@ -27,6 +27,5 @@ ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
                "7          ","8          ","900000","1000000"),
     expand = c(0,0)
   ) +
-  annotate(geom="text",x=1932,y=1000000,label="KÄ°LO",fontface="bold.italic", hjust=1.8,vjust=-1.1) +
+  annotate(geom="text",x=1932,y=1000000,label="KÝLO",fontface="bold.italic", hjust=1.8,vjust=-1.1) +
   annotate(geom="text",x=1932,y=1000000,label="----------------",fontface="bold.italic", hjust=1.1,vjust=-0.5)
-  

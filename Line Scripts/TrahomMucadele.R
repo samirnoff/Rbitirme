@@ -7,7 +7,7 @@ trahommucadele <- data.frame(tarih,miktar,miktar2)
 ggplot(trahommucadele, aes(x=tarih)) +
   geom_line(aes(y=miktar), size=1.3) + geom_point(aes(y=miktar), size=3)+
   geom_line(aes(y=miktar2), size=1.3, linetype="dashed") + geom_point(aes(y=miktar2), size=2) +
-  labs(title = "TRAHOM MÃœCADELE TEÅžKÄ°LÃ‚TI",
+  labs(title = "TRAHOM MÜCADELE TEÞKÝLÂTI",
        subtitle = "Hastane ve Dispanserler Faaliyeti\n",
        caption = "1925 \u2013 1937") +
   theme_classic() +
@@ -34,11 +34,10 @@ ggplot(trahommucadele, aes(x=tarih)) +
     expand = c(0,0)
   ) +
   annotate(geom="rect", xmin = 1925.1, xmax = 1930.5, ymin = 53500, ymax = 60000, fill = "white" ) +
-  annotate(geom="text", x=1928.5,y=58000,label="Muayene SayÄ±sÄ±", size= 5, fontface="bold.italic") +
+  annotate(geom="text", x=1928.5,y=58000,label="Muayene Sayýsý", size= 5, fontface="bold.italic") +
   annotate(geom="rect", xmin = 1925.5, xmax = 1926.5, ymin = 57900, ymax = 58000, fill = "black" ) +
-  annotate(geom="text", x=1928.5,y=55000,label="Ä°laÃ§lananlar  \" ", size= 5, fontface="bold.italic") +
+  annotate(geom="text", x=1928.5,y=55000,label="Ýlaçlananlar  \" ", size= 5, fontface="bold.italic") +
   annotate(geom="text", x=1926,y=55000,label="- - - - ", size= 5, fontface="bold")
-
 
 # An alternative solutin for adjusting thickness of vertical/horizontal grid lines and
 # automating the legend with respect to linetype
@@ -52,7 +51,7 @@ trahommucadele <- data.frame(tarih,miktar,miktar2)
 ggplot(trahommucadele, aes(x=tarih)) +
   geom_line(aes(y=miktar,linetype="dashed"), size=1.3) + geom_point(aes(y=miktar), size=3)+
   geom_line(aes(y=miktar2,linetype="solid"), size=1.3) + geom_point(aes(y=miktar2), size=2) +
-  labs(title = "TRAHOM MÃœCADELE TEÅžKÄ°LÃ‚TI",
+  labs(title = "TRAHOM MÜCADELE TEÞKÝLÂTI",
        subtitle = "Hastane ve Dispanserler Faaliyeti\n",
        caption = "1925 \u2013 1937") +
   theme(panel.background = element_rect(fill = "white"),panel.grid.major.y = element_line(colour = "black", size = 0.5),panel.grid.major.x = element_line(colour = "black", size = 1.4)) +
@@ -77,8 +76,8 @@ ggplot(trahommucadele, aes(x=tarih)) +
     labels = c("0","2.000","4","6","8","10.000","20","40","60","80","100.000","200","400","600","800","1.000.000","2.000.000","3.000.000"),
     expand = c(0,0)
   ) +
-  scale_linetype_discrete(name="", labels=c("Muayene sayÄ±sÄ±","Ä°laÃ§lananlar  \" "))+
-theme(legend.title=element_blank(),legend.text = element_text(size=12,face = "bold.italic"),legend.position=c(0.04,0.98), 
-      legend.justification=c(0,1), legend.direction='vertical',legend.spacing.x = unit(0.15,"cm"),
-      legend.key = element_rect(size = 5, fill = "white", colour = "white"))+
+  scale_linetype_discrete(name="", labels=c("Muayene sayýsý","Ýlaçlananlar  \" "))+
+  theme(legend.title=element_blank(),legend.text = element_text(size=12,face = "bold.italic"),legend.position=c(0.04,0.98), 
+        legend.justification=c(0,1), legend.direction='vertical',legend.spacing.x = unit(0.15,"cm"),
+        legend.key = element_rect(size = 5, fill = "white", colour = "white"))+
   guides(fill=guide_legend(override.aes = list(size = 1.2), keywidth=0.78, keyheight=0.30,default.unit="inch")) 
