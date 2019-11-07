@@ -3,8 +3,8 @@ zaman <- rep(seq(1924,1937),2)
 yatak <- c(3278,4791,4235,4537,4997,5466,5994,6004,5756,7151,10415,12018,16382,18014)
 ayak <- c(NA,10651,15496,16050,22727,30712,36358,48448,56652,66822,100985,116123,193488,232407)
 deger <- c(yatak,ayak)
-grup <- factor(c(rep(c("Yatýrýlarak tedavi","Ayakta tedavi"), each = length(yatak))),
-               levels = c("Yatýrýlarak tedavi","Ayakta tedavi"))
+grup <- factor(c(rep(c("YatÄ±rÄ±larak tedavi","Ayakta tedavi"), each = length(yatak))),
+               levels = c("YatÄ±rÄ±larak tedavi","Ayakta tedavi"))
 
 numune <- data.frame(zaman, deger, grup)
 
@@ -19,7 +19,7 @@ ggplot(numune, aes(x = zaman, y = deger, fill = grup)) +
   geom_bar(stat = "identity", position = position_dodge(), color = "black", size = 1.25, width = 0.70) +
   scale_fill_manual(values=c("black","white")) +
   theme_classic() +
-  labs(title = "NÜMUNE HASTANELERÝ MESAÝSÝ",
+  labs(title = "NÃœMUNE HASTANELERÄ° MESAÄ°SÄ°",
        subtitle = "1924 \u2013 1937\n\n") +
   #  theme(plot.margin = unit(c(2,1,2,1), "lines")) + 
   theme(plot.title = element_text(hjust = 0.4),
