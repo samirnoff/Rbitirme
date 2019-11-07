@@ -18,12 +18,12 @@ ggplot(zonguldak, aes(x = zaman)) +
   geom_text(aes(y=yatak1), label = yatak1, angle = 90, hjust = -0.2, fontface = "bold.italic") +
   geom_text(aes(y=ayak1), label = ayak1, color = "white", vjust = -0.15, size= 3.7, fontface = "bold.italic") +
   theme_classic() +
-  ggtitle("ZONGULDAK  HASTANESÝNÝN  FAALÝYETÝ \n        1924 \u2013 1937") +
+  ggtitle("ZONGULDAK  HASTANESÄ°NÄ°N  FAALÄ°YETÄ° \n        1924 \u2013 1937") +
   theme(plot.title = element_text(vjust=0.95, hjust=0.3)) + 
   scale_y_continuous(expand = c(0,1)) +
   scale_fill_manual(name = "",
                     values=c("black", "white"),
-                    labels=c("Yatýrýlarak tedavi sayýsý","Ayakta         \"           \" "))+
+                    labels=c("YatÃ½rÃ½larak tedavi sayÃ½sÃ½","Ayakta         \"           \" "))+
   theme(axis.line.y = element_blank(),
         axis.text.y = element_blank(), 
         axis.ticks = element_blank(), 
@@ -64,14 +64,14 @@ labell2 <- c("","67","69","173","272","291","183","161","725","","","","","")
 labell3 <- c("","","","","","","","","","1.531","3.203","2.443","3.661","4.432")
 
 ggplot(data=data2,aes(x=factor(zaman))) +
-  ggtitle("ZONGULDAK HASTANESÝNÝN FAALÝYETÝ \n                    1924 \u2013 1937")+
+  ggtitle("ZONGULDAK HASTANESÄ°NÄ°N FAALÄ°YETÄ° \n                    1924 \u2013 1937")+
   geom_bar(aes(y=y1,fill="black"),stat= "identity", col = "black", size=1)+
   geom_bar(aes(y=y2,fill="white"),stat= "identity", col = "black", size=1)+
   geom_bar(aes(y=y3),stat= "identity", col = "black", fill="black", size=1)+
   theme_classic()+
   scale_fill_manual(name = "",
                     values=c("black", "white"),
-                    labels=c("Yatýrýlarak tedavi sayýsý","Ayakta         \"           \" "))+
+                    labels=c("YatÄ±rÄ±larak tedavi sayÄ±sÄ±","Ayakta         \"           \" "))+
   theme(axis.line.y=element_blank(), axis.text.y = element_blank(), 
         axis.ticks = element_blank(), axis.title = element_blank(),
         axis.line.x = element_line(colour = "black", size = 0.9),
