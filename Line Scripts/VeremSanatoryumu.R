@@ -7,9 +7,9 @@ verem <- data.frame(tarih,miktar,miktar2)
 ggplot(verem, aes(x=tarih)) +
   geom_line(aes(y=miktar), size=1.3) + geom_point(aes(y=miktar), size=3)+
   geom_line(aes(y=miktar2), size=1.3, linetype="dashed") + geom_point(aes(y=miktar2), size=3) +
-  labs(title = "HEYBELİADA VEREM SANATORYUMU MESAİSİ
+  labs(title = "HEYBELÄ°ADA VEREM SANATORYUMU MESAÄ°SÄ°
   1924 \U2013 1937",
-       subtitle = "Yarım Lugaritmik Diyağram") +
+       subtitle = "YarÄ±m Lugaritmik DiyaÄŸram") +
   theme_classic() +
   theme(panel.grid.major = element_line(colour = "black", size = 1)) +
   theme(plot.title = element_text(hjust = 0.5, size = 17, face = "bold")) +
@@ -33,7 +33,7 @@ ggplot(verem, aes(x=tarih)) +
     expand = c(0,0)
   ) +
   annotate(geom="rect", xmin = 1925.1, xmax = 1930.9, ymin = 540, ymax = 620, fill = "white" ) +
-  annotate(geom="text", x=1928.2,y=590,label="Yatırılarak tedavi", size= 4.7, fontface="bold.italic") +
+  annotate(geom="text", x=1928.2,y=590,label="YatÄ±rÄ±larak tedavi", size= 4.7, fontface="bold.italic") +
   annotate(geom="rect", xmin = 1925.5, xmax = 1926.5, ymin = 588, ymax = 590, fill = "black" ) +
   annotate(geom="text", x=1928.8,y=560,label="Laboratuvar ve Rontken ", size= 4.7, fontface="bold.italic") +
   annotate(geom="text", x=1926.1,y=560,label="- - - -  ", size= 6, fontface="bold")
@@ -49,9 +49,9 @@ verem <- data.frame(tarih,miktar,miktar2)
 ggplot(verem, aes(x=tarih)) +
   geom_line(aes(y=miktar,linetype="dashed"), size=1.3) + geom_point(aes(y=miktar), size=3)+
   geom_line(aes(y=miktar2,linetype="solid"), size=1.3) + geom_point(aes(y=miktar2), size=3) +
-  labs(title = "HEYBELİADA VEREM SANATORYUMU MESAİSİ
+  labs(title = "HEYBELÄ°ADA VEREM SANATORYUMU MESAÄ°SÄ°
        1924 \U2013 1937",
-       subtitle = "Yarım Lugaritmik Diyağram") +
+       subtitle = "YarÃ½m Lugaritmik DiyaÄŸram") +
   theme(panel.background = element_rect(fill = "white"),panel.grid.major.y = element_line(colour = "black", size = 0.7),
         panel.grid.major.x = element_line(colour = "black", size = 1.4)) +
   theme(plot.title = element_text(hjust = 0.5, size = 17, face = "bold")) +
@@ -74,7 +74,7 @@ ggplot(verem, aes(x=tarih)) +
     labels = c("0","50","100","2","3","4","500","6","7","8","9","1.000","5.000","10.000","14.000"),
     expand = c(0,0)
   )+
-  scale_linetype_discrete(name="", labels=c("Yatırılarak tedavi","Laboratuvar ve Rontken "))+
+  scale_linetype_discrete(name="", labels=c("YatÄ±rÄ±larak tedavi","Laboratuvar ve Rontken "))+
   theme(legend.title=element_blank(),legend.text = element_text(size=12,face = "bold.italic"),legend.position=c(0.1,0.91), 
         legend.justification=c(0,1), legend.direction='vertical',legend.spacing.x = unit(0.15,"cm"),
         legend.key = element_rect(size = 5, fill = "white", colour = "white"))+
