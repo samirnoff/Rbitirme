@@ -26,7 +26,7 @@ ggplot(sitma, aes(x = zaman, y = deger, fill = grup, color = grup)) +
         axis.text.y = element_blank(), 
         axis.ticks = element_blank(), 
         axis.title = element_blank(),
-        axis.text.x = element_text(color = "black", size = 14, vjust = 0.5, face = "bold", angle = 90),
+        axis.text.x = element_text(color = "black", size = 22, hjust = 0.7, vjust = 0.5, face = "bold", angle = 89.99),
         axis.line.x = element_line(colour = "black", size = 1.2)) +
   theme(legend.title=element_blank(),
         legend.text = element_text(size=14,face = "bold.italic"),
