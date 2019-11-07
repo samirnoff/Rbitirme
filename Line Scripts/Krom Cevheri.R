@@ -27,8 +27,8 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
     expand = c(0,0)
   ) +
   annotate(geom="rect", xmin = 1924.05, xmax = 1934.95, ymin = 180.3, ymax = 199.8, fill = "white" ) +
-  annotate(geom="text", x=1929.5,y=190,label="KROM CEVHERÝ ÝSTÝHSÂLÝMÝZ", size= 9.3, fontface="italic") +
-  annotate(geom="text", x=1922, y=0, label="Üç sfýr\nilavesile",fontface="bold.italic", hjust=1, vjust=1.8) +
+  annotate(geom="text", x=1929.5,y=190,label="KROM CEVHERÄ° Ä°STÄ°HSÃ‚LÄ°MÄ°Z", size= 9.3, fontface="italic") +
+  annotate(geom="text", x=1922, y=0, label="ÃœÃ§ sfÄ±r\nilavesile",fontface="bold.italic", hjust=1, vjust=1.8) +
   annotate(geom="text", x=1922, y=220, label=expression(bold(underline("TON"))), hjust=1.15, vjust=0.2, size=5) +
   annotate(geom="segment",x=1922.13,xend=1922.13, y=0,yend=220,colour="black",size=1) +
   annotate(geom="rect", xmin = 1922, xmax = 1922.13, ymin = 20, ymax = 40, fill = "black") +
