@@ -57,7 +57,7 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
   annotate(geom="rect", xmin = 1922, xmax = 1922.13, ymin = 180, ymax = 200, fill = "black")
 ```
 
-![Krom Cevheri İstihsâlimiz](https://github.com/samirnoff/Rbitirme/blob/master/Graph/KromCevheri.jpeg)
+![Krom Cevheri İstihsâlimiz](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/KromCevheri.jpeg)
 
 ### Şarap Satışı
 
@@ -96,7 +96,7 @@ ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
   annotate(geom="text",x=1932,y=1000000,label="KİLO",fontface="bold.italic", hjust=1.8,vjust=-1.1) +
   annotate(geom="text",x=1932,y=1000000,label="----------------",fontface="bold.italic", hjust=1.1,vjust=-0.5)
 ```
-![Şarap Satışı](https://github.com/samirnoff/Rbitirme/blob/master/Graph/SarapSatisi.jpeg)
+![Şarap Satışı](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/SarapSatisi.jpeg)
 
 ### Orta Öğretim Öğretmen Okulu Talebe Sayısı
 
@@ -156,7 +156,7 @@ ggplot(talebe, aes(tarih,miktar)) + geom_line(size=2) +
   annotate(geom = "text", x = 1936.5, y = 2750, label = "2699", fontface = "bold")
   ```
   
-  ![Talebe Sayısı](https://github.com/samirnoff/Rbitirme/blob/master/Graph/TalebeSayisi.jpeg)
+  ![Talebe Sayısı](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/TalebeSayisi.jpeg)
   
   ### Trahom Mücadele Teşkilâtı - Hastane ve Dispanserler Faaliyeti
   
@@ -204,7 +204,7 @@ ggplot(trahommucadele, aes(x=tarih)) +
   annotate(geom="text", x=1928.5,y=55000,label="İlaçlananlar  \" ", size= 5, fontface="bold.italic") +
   annotate(geom="text", x=1926,y=55000,label="- - - - ", size= 5, fontface="bold")
   ```
-  ![Trahom Mücadele](https://github.com/samirnoff/Rbitirme/blob/master/Graph/TrahomMucadele.jpeg)
+  ![Trahom Mücadele](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/TrahomMucadele.jpeg)
   
   ### Heybeliada Verem Sanatoryumu Mesaisi
   
@@ -251,7 +251,7 @@ ggplot(verem, aes(x=tarih)) +
   annotate(geom="text", x=1928.8,y=560,label="Laboratuvar ve Rontken ", size= 4.7, fontface="bold.italic") +
   annotate(geom="text", x=1926.1,y=560,label="- - - -  ", size= 6, fontface="bold")
   ```
-  ![Verem Sanatoryumu](https://github.com/samirnoff/Rbitirme/blob/master/Graph/VeremSanatoryumu.jpeg)
+  ![Verem Sanatoryumu](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/VeremSanatoryumu.jpeg)
   
   ### Duyunu Umumiye ve Devlet İnhisarı Zamanlarındaki Safi İçki Varidatı
   
@@ -298,6 +298,6 @@ ggplot(duyunu, aes(tarih)) +
   annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6775000, ymax = 6790000, fill = "black" ) +
   annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6745000, ymax = 6760000, fill = "black" ) 
   ```
-  ![Duyunu Umumiye](https://github.com/samirnoff/Rbitirme/blob/master/Graph/DuyunuUmumiye.jpeg)
+  ![Duyunu Umumiye](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/DuyunuUmumiye.jpeg)
   
   
