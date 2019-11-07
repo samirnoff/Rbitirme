@@ -4,8 +4,8 @@ yatak <- c(17700,22661,24851,37117,54065,50562,54318,57570,62301,63468,70025,740
 tedavi <- c(NA,45333,50286,116765,164381,218366,264382,299398,351547,374318,308366,357450)
 zaman <- rep(seq(1926,1937),2)
 deger <- c(yatak,tedavi)  
-grup <- factor(c(rep(c("Yatakda tedavi sayısı", "Ayakta          \"       \" "), each=length(yatak))),
-               levels=c("Yatakda tedavi sayısı", "Ayakta          \"       \" "))
+grup <- factor(c(rep(c("Yatakda tedavi sayÄ±sÄ±", "Ayakta          \"       \" "), each=length(yatak))),
+               levels=c("Yatakda tedavi sayÄ±sÄ±", "Ayakta          \"       \" "))
 data <- data.frame("x"=zaman, "y"=deger, "grp"=grup) 
 text <- element_text(color = "black", size = 14)
 xcor <- rep(seq(1926,1937),2)
@@ -15,7 +15,7 @@ labell <- c("17.700","","","37.117","54.065","50.562","54.318","57.570","62.301"
 labell2 <- c("","22.661","24.851","","","","","","","","","","","","","","","","","","","","","")
 
 ggplot(data=data,aes(x=zaman, y=deger, fill=grup, color=grup, alpha=grup)) +
-  labs(title = "HUSUSİ İDARELERE AİT HASTANELER MESAİSİ
+  labs(title = "HUSUSÄ° Ä°DARELERE AÄ°T HASTANELER MESAÄ°SÄ°
   
        ",
        subtitle = "1926 \u2013 1937\n")+
