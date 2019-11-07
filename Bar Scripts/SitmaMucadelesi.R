@@ -3,8 +3,8 @@ zaman <- rep(seq(1925,1937),2)
 muayene <- c(16579,148264,212568,243296,354455,370073,530595,557081,547332,570575,594530,654668,734041)
 musbet <- c(1434,14791,10190,9928,36186,45653,61241,72500,50609,48744,40842,62466,69850)
 deger <- c(muayene,musbet)
-grup <- factor(c(rep(c("Kan muayenesi sayýsý","Müsbet kan           \" "), each = length(muayene))),
-               levels = c("Kan muayenesi sayýsý","Müsbet kan           \" "))
+grup <- factor(c(rep(c("Kan muayenesi sayÄ±sÄ±","MÃ¼sbet kan           \" "), each = length(muayene))),
+               levels = c("Kan muayenesi sayÄ±sÄ±","MÃ¼sbet kan           \" "))
 sitma <- data.frame(zaman,deger, grup)
 
 xcor1 <- seq(1925,1937) - 0.2
@@ -37,7 +37,7 @@ ggplot(sitma, aes(x = zaman, y = deger, fill = grup, color = grup)) +
         legend.box.spacing = unit(1,"cm"),
         legend.key = element_rect(fill = "white", colour = "white")) +
   guides(fill = guide_legend(keywidth = 0.6, keyheight=0.2, default.unit = "inch")) +
-  annotate("text", x = 1928, y = 734040, label = "SITMA MÜCADELESÝ", size = 6) +
+  annotate("text", x = 1928, y = 734040, label = "SITMA MÃœCADELESÄ°", size = 6) +
   annotate("text", x = 1928, y = 700000, label = "Laboratuvar mesaisi", size = 7, fontface = "italic") +
   annotate("text", x = 1928, y = 665000, label = "1925 \u2013 1937", size = 7.5, fontface = "bold") +
   annotate("text",x = xcor1, y = ycor1, label = annolabel1, angle = 90, fontface = "bold.italic",
