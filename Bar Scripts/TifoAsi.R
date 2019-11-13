@@ -56,7 +56,7 @@ ggplot(tifo, aes(x = zaman, y = deger, fill = grup)) +
   theme(plot.margin = unit(c(5,1,1,1), "lines")) + 
   coord_cartesian(clip = 'off') +
   annotate("text", x = 1931, y = 500500, label = "Yurdun muhtelif bölgelerinde yapılan", size = 4) +
-  annotate("text", x = 1931, y = 470000, label = ". Tifo Aşısı", size = 6, fontface = "bold") +
+  annotate("text", x = 1931, y = 470000, label = ". Tifo aşısı", size = 6, fontface = "bold") +
   annotate("text", x = 1931, y = 440000, label = "1927 \u2013 1937", size = 3.7 , fontface = "bold") +
   scale_x_continuous(breaks = seq(1927,1937)) +
   scale_y_continuous(expand = c(0,0))
