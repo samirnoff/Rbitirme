@@ -19,7 +19,7 @@ annolabel1 <- c("91.431","94 320","70.005","71.045","111.012","114.590","143.650
 annolabel2 <- c("57.442","55.797","48.810","38.561","89.604","82.093","97.657","133.314","64.938","28.539","460.192")
 annolabel3 <- c("","","","","","","","","19.162","","69963")
 
-cizgi <- seq(0,0.14,0.07)
+cizgi <- seq(0,0.06,0.12,0.06)
 
 ek <- seq(0,10)
 xline <- c(1926.6) + ek
@@ -27,7 +27,7 @@ xlinend <- c(1927.4) + ek
 
 ggplot(tifo, aes(x = zaman, y = deger, fill = grup)) +
   geom_bar(stat = "identity", position = position_dodge(), color = "black", size = 1.05, width = 0.8) +
-  scale_fill_manual(values=c("black","white",alpha("black",0.1))) +
+  scale_fill_manual(values=c("black","white","white")) +
   labs(caption = "Sayılar aşı tatbik edilen şahısların miktarını gösterir.") +
   theme_classic() +
   theme(plot.caption = element_text(face = "bold.italic",size = 10 , hjust = 0)) +
@@ -47,16 +47,19 @@ ggplot(tifo, aes(x = zaman, y = deger, fill = grup)) +
         axis.ticks = element_blank(), 
         axis.title = element_blank(),
         axis.text.x = element_text(color = "black", size = 11, face = "bold", vjust = 1)) +
-  theme(legend.title=element_blank(),
-        legend.text = element_text(size = 11, face = "italic"),
-        legend.position = c(0.33,0.75), 
-        legend.justification = c(0,1), 
-        legend.direction = 'vertical',
-        legend.spacing.x = unit(0.3,"cm"))+
+  theme (legend.position = "none") +
   theme(plot.margin = unit(c(5,1,1,1), "lines")) + 
   coord_cartesian(clip = 'off') +
   annotate("text", x = 1931, y = 500500, label = "Yurdun muhtelif bölgelerinde yapılan", size = 4) +
   annotate("text", x = 1931, y = 470000, label = ". Tifo aşısı", size = 6, fontface = "bold") +
   annotate("text", x = 1931, y = 440000, label = "1927 \u2013 1937", size = 3.7 , fontface = "bold") +
   scale_x_continuous(breaks = seq(1927,1937)) +
-  scale_y_continuous(expand = c(0,0))
+  scale_y_continuous(expand = c(0,0)) +
+  annotate("rect", xmin = 1929.9 , xmax = 1930.2 , ymin = 380000, ymax = 395000, colour = "black", fill= "black", size = 1) +
+  annotate("rect", xmin = 1929.9 , xmax = 1930.2 , ymin = 360000, ymax = 375000, colour = "black", fill= "white", size = 1) +
+  annotate("rect", xmin = 1929.9 , xmax = 1930.2 , ymin = 340000, ymax = 355000, colour = "black", fill= "white", size = 1) +
+  annotate("rect", xmin = 1930.25 , xmax = 1932 , ymin = 329000, ymax = 410000, fill= "white") +
+  annotate(geom="text", x=1930.9 ,y=387500 ,label="Birinci   aşı", size= 3.7, fontface="italic") +
+  annotate(geom="text", x=1930.9 ,y=367500 ,label="İkinci      \" ", size= 3.7, fontface="italic") +
+  annotate(geom="text", x=1930.9 ,y=347500 ,label="Üçüncü   \" ", size= 3.7, fontface="italic") +
+  annotate("segment", x = 1930 + cizgi, xend = 1930 + cizgi, y = 340000, yend = 355000, size = 1)
