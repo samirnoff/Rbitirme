@@ -25,7 +25,7 @@ ggplot(merkez, aes(x=zaman,fill = grup1))+
            stat = "identity", colour = "black", size = 1.1, width = 0.8) +
   scale_fill_manual(values=c("white","black")) +
   coord_flip(clip = 'off')+
-  scale_x_reverse(expand = c(0,0.2))+
+  scale_x_reverse(expand = c(0,0)) +
   theme_classic() +
   theme(plot.margin = unit(c(5,3,1,3), "lines")) +  
   labs(caption = "S     A     Y     I     S     I") +
@@ -36,8 +36,8 @@ ggplot(merkez, aes(x=zaman,fill = grup1))+
         axis.text.x = element_text(color = "black", size = 11, face = "bold", vjust = 1),
         axis.ticks.y = element_blank(),
         axis.title = element_blank(),
-        axis.line.x = element_line(colour = "black", size = 1.2)) +
-  
+        axis.ticks.length.x = unit(.15,"cm"),
+        axis.line.x = element_blank()) +
   annotate("text", x = 1927, y = 0, label = "T.C. \n MERKEZ HIFZISSIHHA MÜESSESESİ", size = 5, fontface = "bold") +
   annotate("text", x = 1927.7, y = 0, label = "Serum ve Aşı istihsal ve sevkiyyatı faaliyeti", size = 5, fontface = "italic") +
   annotate("text", x = 1928.2, y = 0, label = "1930 \u2013 1937", size = 5) +
@@ -64,6 +64,11 @@ ggplot(merkez, aes(x=zaman,fill = grup1))+
   annotate("segment", x = 1935.4, xend = 1936, y = -250 + cizgi, yend = -500 + cizgi, size = 0.5) +
   annotate("segment", x = 1936.4, xend = 1937, y = -250 + cizgi, yend = -500 + cizgi, size = 0.5) +
   annotate("rect", ymin = -350, ymax = 350, xmin = 1929.6 + ek, xmax = 1930.41 + ek, fill = "white", colour = "black", size = 1) +
-  annotate("text", x = c(1930:1937), y = 0, label = paste(c(1930:1937)), size = 5.5, fontface = "bold") 
+  annotate("text", x = c(1930:1937), y = 0, label = paste(c(1930:1937)), size = 5.5, fontface = "bold") +
+  annotate("segment", x = 1937.7, xend = 1937.7, y = -4850, yend = -350, size = 1.5) +
+  annotate("segment", x = 1937.7, xend = 1937.7, y = 350, yend = 4850, size = 1.5) +
+  annotate("segment", x = 1937, xend = 1937.7, y = -350, yend = -350, size = 1) +
+  annotate("segment", x = 1937, xend = 1937.7, y = 350, yend = 350, size = 1)
+  
   
   
