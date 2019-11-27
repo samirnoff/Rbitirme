@@ -36,7 +36,7 @@ ggplot(merkez, aes(x=zaman,fill = grup1))+
         axis.ticks.y = element_blank(),
         axis.title = element_blank(),
         axis.line.x = element_line(colour = "black", size = 1.2)) +
-  annotate("text", x = 1927, y = 0, label = "T.C. \n MERKEZ HIFZISSIHA MÜESSESESİ", size = 5, fontface = "bold") +
+  annotate("text", x = 1927, y = 0, label = "T.C. \n MERKEZ HIFZISSIHHA MÜESSESESİ", size = 5, fontface = "bold") +
   annotate("text", x = 1927.7, y = 0, label = "Serum ve Aşı istihsal ve sevkiyyatı faaliyeti", size = 5, fontface = "italic") +
   annotate("text", x = 1928.2, y = 0, label = "1930 \u2013 1937", size = 5) +
   annotate("text", x = 1929.3, y = 0, label = "Yıllar", size = 5) +
