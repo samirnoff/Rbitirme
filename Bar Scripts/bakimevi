@@ -1,0 +1,65 @@
+library(ggplot2)
+cocukyat <- c(51,68,59,86,88,290,292,323,454,519,749,1013) + 700
+cocukayak <- c(193.0,295.7,286.4,470.7,767.1,953.8,1181.6,1246.1,1420.6,1697.1,2055.6,2227.5) + 700
+kadinyat <- c(161,366,460,605,1161,1944,2370,2720,3236,3725,4703,4971) + 700
+kadinayak <- c(639.7,834.5,647.1,812.4,1436.3,2217.7,2216.8,2686.6,3374.3,3424.2,3514.0,4329.4) + 700
+yatak <- c(cocukyat, kadinyat)
+ayak <- c(cocukayak,kadinayak)
+deger <- c(yatak,ayak)
+tarih <- rep(c(1926:1937),4)
+grup1 <- rep(c("Çocuk\n","Kadın"), each = length(cocukyat))
+grup2 <- rep(c("yatak","ayak"), each = length(yatak))
+
+bakimevi <- data.frame(tarih, deger, grup1, grup2) 
+
+ek <- seq(0,11)
+
+label1 <- c("1 930","2 957","2 864","4 707","1 671","9 538","11 816","12 461","14 206","16.971","20.556","22 275")
+label2 <- c("6 397","8 345","6 471","8 124","14 363","22.177","22 168","22.866","33 743","34.242","35.140","43.294")
+label3 <- c("51","68","59","86","88","290","292","323","454","519","749","1 013")
+label4 <- c("161","366","460","605","1.161","944","2 370","2 720","3 236","3.725","4.703","4 971")
+  
+ggplot(bakimevi, aes(x = tarih, fill = grup1)) +
+  geom_bar(data = subset(bakimevi, grup2 == "ayak"), aes(y = deger), 
+           stat = "identity", position = position_dodge(width = -0.7), color = "black", size = 1.2, width = 0.7) +
+  geom_bar(data = subset(bakimevi, grup2 == "yatak"), aes(y = -deger), 
+           stat = "identity", position = position_dodge(width = -0.7), color = "black", size = 1.2, width = 0.7) +
+  theme_classic() +
+  labs(title = "DOĞUM  VE  ÇOCUK  BAKIM  EVLERİ  FAALİYETİ\n1926 \U2013 1937\n") +
+  theme(plot.margin = unit(c(2,3,4,3), "lines")) + 
+  scale_fill_manual(values = c("black","white")) +
+  scale_y_continuous(breaks = c(-5700, -4700, -3700, -2700, -1700, -700, 700, 1700, 2700, 3700, 4700, 5700),
+                     labels = c("5.000","4","3","2","1","0","0","10","20","30","40","50.000"),
+                     limits = c(-5700,5700),
+                     expand = c(0,0)) +
+  coord_flip(clip = 'off') +
+  scale_x_reverse(expand = c(0,0)) +
+  theme(legend.title=element_blank(),
+        legend.text = element_text(size = 13.5, face = "italic"),
+        legend.position = c(-0.04,0.9), 
+        legend.justification = c(0,1), 
+        legend.spacing.x = unit(0.2,"cm"),
+        legend.direction = 'vertical',
+        legend.key = element_rect(size = 12, fill = "white", colour = "white"),
+        legend.key.width = unit(1.5,'lines')) +
+  theme(plot.title = element_text(hjust = 0.5, size = 16),
+        axis.title = element_blank(),
+        axis.line.y = element_blank(),
+        axis.line.x = element_line(size = 1.2),
+        axis.ticks.y = element_blank(),
+        axis.ticks.x = element_line(size = 1.2),
+        axis.ticks.length.x = unit(.15,"cm"),
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(color = "black", size = 15, face = "bold", vjust = 1)) +
+  annotate("rect", ymin = -700, ymax = 700, xmin = 1925.7, xmax = 1937.6, fill = "black") +
+  annotate("rect", ymin = -630, ymax = 630, xmin = 1925.72 + ek, xmax = 1926.30 + ek, fill = "white") +
+  annotate("text", x = c(1926:1937), y = 0, label = paste(c(1926:1937)), size = 6, fontface = "bold") +
+  annotate("text", x = c(1926:1937), y = cocukayak, label = label1, hjust = -0.1, vjust = -0.5, fontface = "bold.italic") +
+  annotate("text", x = c(1926:1937), y = kadinayak, label = label2, hjust = -0.1, vjust = 1, fontface = "bold.italic") +
+  annotate("text", x = c(1926:1937), y = -cocukyat, label = label3, hjust = 1.2, vjust = -0.5, fontface = "bold.italic") +
+  annotate("text", x = c(1926:1937), y = -kadinyat, label = label4, hjust = 1.2, vjust = 1, fontface = "bold.italic") +
+  annotate("text", x = 1925.3, y = 0, label = "YILLAR",fontface = "bold.italic") +
+  annotate("text", x = 1932, y = -4700, label = "YATIRILARAK  TEDAVİ", angle = 50, size = 6, fontface = "italic") +
+  annotate("text", x = 1932, y = 4700, label = "AYAKTA     TEDAVİ", angle = -60, size = 6, fontface = "italic") +
+  annotate("text", x = 1937, y = -4100, label = "B  I  N  L  E  R", vjust = 4.7, size = 5, fontface = "italic") +
+  annotate("text", x = 1937, y = 2700, label = "O N   B  İ  N  L  E  R", vjust = 4.7, size = 5, fontface = "italic")
