@@ -17,6 +17,7 @@ label1 <- c("","698","1.849","2.066","2.029","2.592","2.447","4.233",
 label2 <- c("","493","1.831","1.933","1.951","2.404","2.326","3.965",
             "3 - 120","144","163","184","202","246","264","537")
 ek <- seq(0,7)
+cizgi <- seq(0,600,40)
 ggplot(merkez, aes(x=zaman,fill = grup1))+
   geom_bar(data = subset(merkez, grup2 == "istihsalat"),aes(y = -deger), position = "identity",
            stat = "identity", colour = "black", size = 1.1, width = 0.8) +
@@ -36,6 +37,7 @@ ggplot(merkez, aes(x=zaman,fill = grup1))+
         axis.ticks.y = element_blank(),
         axis.title = element_blank(),
         axis.line.x = element_line(colour = "black", size = 1.2)) +
+  
   annotate("text", x = 1927, y = 0, label = "T.C. \n MERKEZ HIFZISSIHHA MÜESSESESİ", size = 5, fontface = "bold") +
   annotate("text", x = 1927.7, y = 0, label = "Serum ve Aşı istihsal ve sevkiyyatı faaliyeti", size = 5, fontface = "italic") +
   annotate("text", x = 1928.2, y = 0, label = "1930 \u2013 1937", size = 5) +
@@ -53,7 +55,14 @@ ggplot(merkez, aes(x=zaman,fill = grup1))+
   annotate("rect", xmin = 1929.85 , xmax = 1930.2 , ymin = -400 , ymax = -630 , size = 1,  fill = "white") +
   annotate("text", x = xcor, y = -istihsalat , label = label1, size = 3.8, hjust = 1.1 , fontface = "bold.italic") +
   annotate("text", x = xcor, y = sevkedilen , label = label2, size = 3.8, hjust = -0.09, fontface = "bold.italic") +
-  annotate("rect", ymin = -350, ymax = 350, xmin = 1929.7, xmax = 1937, fill = "grey") +
+  annotate("rect", ymin = -350, ymax = 350, xmin = 1929.7, xmax = 1937, fill = "white", colour = "black", size = 1) +
+  annotate("segment", x = 1930.4, xend = 1931, y = -250 + cizgi, yend = -500 + cizgi, size = 0.5) +
+  annotate("segment", x = 1931.4, xend = 1932, y = -250 + cizgi, yend = -500 + cizgi, size = 0.5) +
+  annotate("segment", x = 1932.4, xend = 1933, y = -250 + cizgi, yend = -500 + cizgi, size = 0.5) +
+  annotate("segment", x = 1933.4, xend = 1934, y = -250 + cizgi, yend = -500 + cizgi, size = 0.5) +
+  annotate("segment", x = 1934.4, xend = 1935, y = -250 + cizgi, yend = -500 + cizgi, size = 0.5) +
+  annotate("segment", x = 1935.4, xend = 1936, y = -250 + cizgi, yend = -500 + cizgi, size = 0.5) +
+  annotate("segment", x = 1936.4, xend = 1937, y = -250 + cizgi, yend = -500 + cizgi, size = 0.5) +
   annotate("rect", ymin = -350, ymax = 350, xmin = 1929.6 + ek, xmax = 1930.41 + ek, fill = "white", colour = "black", size = 1) +
   annotate("text", x = c(1930:1937), y = 0, label = paste(c(1930:1937)), size = 5.5, fontface = "bold") 
   
