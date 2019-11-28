@@ -26,7 +26,7 @@ annolabel1 <- c("","17","17","14","32","32","56","10","24","36","25","31")
 annolabel2 <- c("108","25","33","69","84","62","3","5","13","29","38","70")
 annolabel3 <- c("93","115","72","61","80","41","154","172","173","201","177","202")
 annolabel4 <- c("","","","","","","","","26","34","35","28")
-cizgi <- c(0,0.05,0.1,0.15)
+cizgi <- c(0.02,0.06,0.1,0.14)
 ek <- seq(0,11)
 xline <- c(1925.65) + ek
 xlinend <- c(1926.35) + ek
@@ -77,11 +77,9 @@ ggplot(frengi, aes(x = zaman, y = deger, fill = grup, color = grup)) +
   annotate("rect", xmin = 1928 , xmax = 1928.2 , ymin = 183, ymax = 188, colour = "black", fill= "white", size = 1) +
   annotate("rect", xmin = 1928 , xmax = 1928.2 , ymin = 176, ymax = 181, colour = "black", fill= "white", size = 1) +
   annotate("rect", xmin = 1928 , xmax = 1928.2 , ymin = 169, ymax = 174, colour = "black", fill= "white", size = 1) +
-  annotate(geom="text", x=1928.9 ,y=192.5 ,label="Arsenobenzol", size= 3.2, fontface="italic") +
-  annotate(geom="text", x=1929.1 ,y=185.5 ,label="Bizmut müstahlebi", size= 3.2, fontface="italic") +
+  annotate(geom="text", x=1928.8 ,y=192.5 ,label="Arsenobenzol", size= 3.2, fontface="italic") +
+  annotate(geom="text", x=1928.95 ,y=185.5 ,label="Bizmut müstahlebi", size= 3.2, fontface="italic") +
   annotate(geom="text", x=1928.5 ,y=178.5 ,label="Civa", size= 3.2, fontface="italic") +
-  annotate(geom="text", x=1929.3 ,y=171.5 ,label="İyodür ve civa merhemi", size= 3.2, fontface="italic") +
-  annotate("segment", x = 1928.001 + cizgi, xend = 1928.001 + cizgi, y = 176, yend = 181, size = 1) +
+  annotate(geom="text", x=1929.1 ,y=171.5 ,label="İyodür ve civa merhemi", size= 3.2, fontface="italic") +
+  annotate("segment", x = 1928.005 + cizgi, xend = 1928.005 + cizgi, y = 176, yend = 181, size = 1) +
   annotate("point", x=xlab, y=ylab, size=0.5, colour= "black")
-  
-  
