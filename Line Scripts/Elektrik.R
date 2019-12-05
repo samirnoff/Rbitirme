@@ -35,4 +35,4 @@ ggplot(elektrik) +
   annotate("text", x = 1923.5, y = 144000, label = "K İ L O W A T .", angle = 90, size = 5.5, fontface = "italic") +
   annotate("text", x = 1929.18, y = 71000, label = "K U R U L M U Ş", angle = 13, size = 7, fontface = "italic") +
   annotate("text", x = 1939.7, y = 184500, label = "KURULACAK", angle = 42.5, size = 6, fontface = "italic") +
-  annotate("text", x = 1933.2, y = 0, label = "Y   I   L     L   A   R", size = 8, fontface = "bold.italic", vjust = 1.8)
+  annotate("text", x = 1933.3, y = 0, label = "Y  I   L     L   A  R", size = 9, fontface = "italic", vjust = 1.8)
