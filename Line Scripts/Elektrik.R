@@ -21,19 +21,20 @@ ggplot(elektrik) +
         axis.line = element_line(size = 1),
         axis.title = element_blank(),
         axis.text.x = element_text(size = 15, face = "bold.italic", color = "black"),
-        axis.text.y = element_text(size = 10.6, vjust = -0.3, hjust = 1, face = "bold", color = "black"),
+        axis.text.y = element_text(size = 10.6, vjust = -0.1, hjust = 1.23, face = "bold.italic", color = "black"),
         axis.ticks = element_blank()) +
   scale_x_continuous(breaks = yil,
                      labels = c("","1928","1933","1937","","1943"),
                      limits = c(1923,1943),
                      expand = c(0,0)) +
   scale_y_continuous(breaks = seq(0,250000,50000),
-                     labels = c("0","50,000","100,000","150,000","200,000","250,000"),
+                     labels = c("","50,000","100,000","150,000","200,000","250,000"),
                      limits = c(0,250000),
                      expand = c(0,0)) +
+  annotate("text", x = 1923, y = 0, label = "0", vjust = 0, hjust = 2, size = 3.7, fontface = "bold.italic") +
   annotate("text", x = 1938, y = 0, label = "1938", vjust = 1.4,hjust = 0.1 , size = 5.6, fontface = "bold.italic") +
   annotate("text", x = 1923, y = 0, label = "1923", vjust = 1.4,hjust = 0.1 , size = 5.6, fontface = "bold.italic") +
   annotate("text", x = 1923.5, y = 144000, label = "K İ L O W A T .", angle = 90, size = 5.5, fontface = "italic") +
   annotate("text", x = 1929.15, y = 70000, label = "K U R U L M U Ş", angle = 13, size = 7, fontface = "italic") +
   annotate("text", x = 1939.7, y = 184500, label = "KURULACAK", angle = 42, size = 6, fontface = "italic") +
-  annotate("text", x = 1933.2, y = 0, label = "Y   I   L    L   A   R", size = 8, fontface = "bold.italic", vjust = 1.8)
+  annotate("text", x = 1933.2, y = 0, label = "Y   I   L     L   A   R", size = 8, fontface = "bold.italic", vjust = 1.8)
