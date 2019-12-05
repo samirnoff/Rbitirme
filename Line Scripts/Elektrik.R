@@ -1,5 +1,3 @@
-# Elektrik
-
 library(ggplot2)
 yil <- c(1923,1928,1933,1937,1938,1943)
 deger1 <- c(40000,60000,72000,125000,140000,NA)
@@ -35,6 +33,6 @@ ggplot(elektrik) +
   annotate("text", x = 1938, y = 0, label = "1938", vjust = 1.4,hjust = 0.1 , size = 5.6, fontface = "bold.italic") +
   annotate("text", x = 1923, y = 0, label = "1923", vjust = 1.4,hjust = 0.1 , size = 5.6, fontface = "bold.italic") +
   annotate("text", x = 1923.5, y = 144000, label = "K İ L O W A T .", angle = 90, size = 5.5, fontface = "italic") +
-  annotate("text", x = 1929.15, y = 70000, label = "K U R U L M U Ş", angle = 13, size = 7, fontface = "italic") +
-  annotate("text", x = 1939.7, y = 184500, label = "KURULACAK", angle = 42, size = 6, fontface = "italic") +
+  annotate("text", x = 1929.18, y = 71000, label = "K U R U L M U Ş", angle = 13, size = 7, fontface = "italic") +
+  annotate("text", x = 1939.7, y = 184500, label = "KURULACAK", angle = 42.5, size = 6, fontface = "italic") +
   annotate("text", x = 1933.2, y = 0, label = "Y   I   L     L   A   R", size = 8, fontface = "bold.italic", vjust = 1.8)
