@@ -10,20 +10,20 @@ grup <- rep(c("1933","1934","1935","1936","1937"), each = length(uc))
 
 tahsilat <- data.frame(ay, deger, grup)
 
-ggplot(tahsilat, aes(x = ay)) +
-  geom_line(data = subset(tahsilat, grup == "1933"), aes(y = uc), linetype = "dashed", size = 1) +
-  geom_line(data = subset(tahsilat, grup == "1934"), aes(y = dort), size = 1) +
-  geom_line(data = subset(tahsilat, grup == "1935"), aes(y = bes - 0.7)) + 
-  geom_line(data = subset(tahsilat, grup == "1935"), aes(y = bes + 0.7)) +
-  geom_line(data = subset(tahsilat, grup == "1936"), aes(y = alti), linetype = "dashed", size = 1.2) + 
-    geom_line(data = subset(tahsilat, grup == "1936"), aes(y = alti - 0.7)) + 
-    geom_line(data = subset(tahsilat, grup == "1936"), aes(y = alti + 0.7)) +
-  geom_line(data = subset(tahsilat, grup == "1937"), aes(y = yedi), size = 1.4) +
-  geom_point(data = subset(tahsilat, grup == "1933"), aes(y = uc), shape = 21,stroke = 1.5, size = 1.8) +
-  geom_point(data = subset(tahsilat, grup == "1934"), aes(y = dort), shape = 21, stroke = 1.5, size = 1.8) +
-  geom_point(data = subset(tahsilat, grup == "1935"), aes(y = bes), shape = 21, stroke = 1.5, size = 1.8) +
-  geom_point(data = subset(tahsilat, grup == "1936"), aes(y = alti), shape = 21, stroke = 1.5,size = 1.8) +
-  geom_point(data = subset(tahsilat, grup == "1937"), aes(y = yedi), shape = 21, stroke = 1.5, size = 1.5) +
+ggplot(tahsilat, aes(x = ay, y = deger ,linetype = grup)) +
+  geom_line(data = subset(tahsilat, grup == "1933"), linetype = "dashed", size = 1) +
+  geom_line(data = subset(tahsilat, grup == "1934"), linetype = "solid", size = 1) +
+  geom_line(data = subset(tahsilat, grup == "1935"), aes(y = deger - 0.7), linetype = "solid") + 
+  geom_line(data = subset(tahsilat, grup == "1935"), aes(y = deger + 0.7), linetype = "solid") +
+  geom_line(data = subset(tahsilat, grup == "1936"), linetype = "longdash", size = 1.2) + 
+    geom_line(data = subset(tahsilat, grup == "1936"), aes(y = deger - 0.7), linetype = "solid") + 
+    geom_line(data = subset(tahsilat, grup == "1936"), aes(y = deger + 0.7), linetype = "solid") +
+  geom_line(data = subset(tahsilat, grup == "1937"), linetype = "solid",size = 1.4) +
+  geom_point(data = subset(tahsilat, grup == "1933"), shape = 21,stroke = 1.5, size = 1.8) +
+  geom_point(data = subset(tahsilat, grup == "1934"), shape = 21, stroke = 1.5, size = 1.8) +
+  geom_point(data = subset(tahsilat, grup == "1935"), shape = 21, stroke = 1.5, size = 1.8) +
+  geom_point(data = subset(tahsilat, grup == "1936"), shape = 21, stroke = 1.5,size = 1.8) +
+  geom_point(data = subset(tahsilat, grup == "1937"), shape = 21, stroke = 1.5, size = 1.5) +
   ggtitle(label = "TAHSİLATIN SON BEŞ YILLIK İNKİŞAF SEYRİ  .\n") +
   theme_classic() +
   coord_cartesian(clip = 'off') +
