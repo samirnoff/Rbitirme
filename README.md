@@ -8,7 +8,29 @@ Bu projenin amacı, Türkiye Cumhuriyeti'nin ilk yıllarında çeşitli verileri
   * [Kullanılan Kütüphaneler](#Kullanılan-Kütüphaneler)
   * [Çalışmalarımız](#Çalışmalarımız)
     * [Çizgi Grafikleri](#Çizgi-Grafikleri)
-      * [Krom Cevheri İstihsalimiz](#Krom-Cevheri-İstihsâlimiz)
+      * [Krom Cevheri İstihsâlimiz](#Krom-Cevheri-İstihsâlimiz)
+      * [Şarap Satışı](#Şarap-Satışı)
+      * [Orta Öğretim Öğretmen Okulu Talebe Sayısı](#Orta-Öğretim-Öğretmen-Okulu-Talebe-Sayısı)
+      * [Trahom Mücadele Teşkilâtı Hastane ve Dispanserler Faaliyeti](#Trahom-Mücadele-Teşkilâtı-Hastane-ve-Dispanserler-Faaliyeti)
+      * [Heybeliada Verem Sanatoryumu Mesaisi](#Heybeliada-Verem-Sanatoryumu-Mesaisi)
+      * [Duyunu Umumiye ve Devlet İnhisarı Zamanlarındaki Safi İçki Varidatı](#Duyunu-Umumiye-ve-Devlet-İnhisarı-Zamanlarındaki-Safi-İçki-Varidatı)
+      * [Cumhuriyet Devrinde Elektrik Takatının Çoğalışını Gösteren Grafik](#Cumhuriyet-Devrinde-Elektrik-Takatının-Çoğalışını-Gösteren-Grafik)
+      * [Yolcu Hayvan ve Yük miktarı](#Yolcu-Hayvan-ve-Yük-miktarı)
+      * [Tahsilatın Son Beş Yıllık İnkişaf Seyri](#Tahsilatın-Son-Beş-Yıllık-İnkişaf-Seyri)
+      * [Sümerbank Fabrikalarının Toptan Satış Endeksi](#Sümerbank-Fabrikalarının-Toptan-Satış-Endeksi)
+     * [Bar Grafikleri](#Bar-Grafikleri)
+      * [Belediyelere Ait Hastaneler Mesaisi](#Belediyelere-Ait-Hastaneler-Mesaisi)
+      * [Devlet Frengi Mücadele Teşkilatı Tarafından Tedavi İçin Vilayetlere Gönderilen İlaçlar](#Devlet-Frengi-Mücadele-Teşkilatı-Tarafından-Tedavi-İçin-Vilayetlere-Gönderilen-İlaçlar)
+      * [Hususi İdarelere Ait Hastaneler Mesaisi](#Hususi-İdarelere-Ait-Hastaneler-Mesaisi)
+      * [İşçi ve İşyeri Sayısı](#İşçi-ve-İşyeri-Sayısı)
+      * [İstanbul Çocuk Hastanesinin Mesaisi](#İstanbul-Çocuk-Hastanesinin-Mesaisi)
+      * [Merkez Hıfzıssıhha Müessesesi Serum ve Aşı İstihsal ve Sevkiyyatı Faaliyeti](#Merkez-Hıfzıssıhha-Müessesesi-Serum-ve-Aşı-İstihsal-ve-Sevkiyyatı-Faaliyeti)
+      * [Numune Hastaneleri Mesaisi](#Numune-Hastaneleri-Mesaisi)
+      * [Sıtma Mücadelesi Laboratuvar Mesaisi](#Sıtma-Mücadelesi-Laboratuvar-Mesaisi)
+      * [Yurdun Muhtelif Bölgelerinde Yapılan Tifo Aşısı](#Yurdun-Muhtelif-Bölgelerinde-Yapılan-Tifo-Aşısı)
+      * [Trahom Mücadele Teşkilatı Hastane ve Dispanserler Faaliyeti](#Trahom-Mücadele-Teşkilatı-Hastane-ve-Dispanserler-Faaliyeti)
+      * [Zonguldak Hastanesinin Faaliyeti](#Zonguldak-Hastanesinin-Faaliyeti)
+      * [Doğum ve Çocuk Bakım Evleri Faaliyeti](#Doğum-ve-Çocuk-Bakım-Evleri-Faaliyeti)      
 <!--te-->
 
 ## Kullanılan Kütüphaneler
@@ -169,7 +191,7 @@ ggplot(talebe, aes(tarih,miktar)) + geom_line(size=2) +
   
   ![Talebe Sayısı](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/TalebeSayisi.jpeg)
   
-  #### Trahom Mücadele Teşkilâtı - Hastane ve Dispanserler Faaliyeti
+  #### Trahom Mücadele Teşkilâtı Hastane ve Dispanserler Faaliyeti
   
   1925 - 1937 yılları arasında Trahom hastalığına karşı kurulan hastane ve dispanserlerin faaliyetlerini gösteren grafiktir.
   
@@ -359,7 +381,7 @@ ggplot(elektrik) +
   ```
 ![Elektrik](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/Elektrik.jpeg)
 
-#### Yolcu, Hayvan ve Yük miktarı
+#### Yolcu Hayvan ve Yük miktarı
 
 ```R
 library(ggplot2)
