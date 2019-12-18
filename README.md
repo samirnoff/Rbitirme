@@ -143,7 +143,7 @@ ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
   annotate(geom="text",x=1932,y=1000000,label="KİLO",fontface="bold.italic", hjust=1.8,vjust=-1.1) +
   annotate(geom="text",x=1932,y=1000000,label="----------------",fontface="bold.italic", hjust=1.1,vjust=-0.5)
 ```
-![Şarap Satışı](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/SarapSatisi.jpeg)
+
 
 #### Orta Öğretim Öğretmen Okulu Talebe Sayısı
 
