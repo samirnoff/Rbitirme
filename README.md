@@ -904,7 +904,7 @@ ggplot(cocuk, aes(x = zaman, y = deger, fill = grup, color = grup)) +
 
 ![İstanbul Çocuk](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/IstanbulCocuk.jpeg)
 
-#### Merkez Hıfzıssıhha Müessesesi Serum ve Aşı İstihsal ve Seykiyyatı Faaliyeti
+#### Merkez Hıfzıssıhha Müessesesi Serum ve Aşı İstihsal ve Sevkiyyatı Faaliyeti
 
 1930 - 1937 yılları arasında günümüzün Refik Saydam Merkez Hıfzıssıhha Enstitüsü kurumunun serum ve aşı üretim ve ulaşım sonuçlarını gösteren grafik
 
