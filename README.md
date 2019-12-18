@@ -49,6 +49,10 @@ library(ggplot2)
 
 1923 - 1937 yılları arasındaki krom cevheri üretimimizi gösteren grafiktir.
 
+Orijinal:
+![Krom Cevheri Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/Krom%20Cevheri.jpg)
+Çıktımız:
+![Krom Cevheri İstihsâlimiz](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/KromCevheri.jpeg)
 ```R
 Sys.setlocale(locale = "Turkish")
 library(ggplot2)
@@ -89,8 +93,6 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
   annotate(geom="rect", xmin = 1922, xmax = 1922.13, ymin = 140, ymax = 160, fill = "black") +
   annotate(geom="rect", xmin = 1922, xmax = 1922.13, ymin = 180, ymax = 200, fill = "black")
 ```
-
-![Krom Cevheri İstihsâlimiz](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/KromCevheri.jpeg)
 
 #### Şarap Satışı
 
