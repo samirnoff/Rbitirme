@@ -2,6 +2,15 @@
 
 Bu projenin amacı, Türkiye Cumhuriyeti'nin ilk yıllarında çeşitli verilerin görselleştirilmesi amacıyla elle çizilen grafiklerin R programlama dili ile bilgisayar ortamında yeniden çizilmesidir. 
 
+## İçindekiler 
+
+<!--ts-->
+  * [Kullanılan Kütüphaneler](#Kullanılan Kütüphaneler)
+  * [Çalışmalarımız](#Çalışmalarımız)
+    * [Çizgi Grafikleri](#Çizgi Grafikleri)
+      * [Krom Cevheri İstihsalimiz](#Krom Cevheri İstihsâlimiz)
+<!--te-->
+
 ## Kullanılan Kütüphaneler
 
 Projede yalnızca R ggplot2 kütüphanesi kullanılmıştır.
