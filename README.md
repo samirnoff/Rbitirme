@@ -5,10 +5,10 @@ Bu projenin amacı, Türkiye Cumhuriyeti'nin ilk yıllarında çeşitli verileri
 ## İçindekiler 
 
 <!--ts-->
-  * [Kullanılan Kütüphaneler](#Kullanılan Kütüphaneler)
+  * [Kullanılan Kütüphaneler](#Kullanılan-Kütüphaneler)
   * [Çalışmalarımız](#Çalışmalarımız)
-    * [Çizgi Grafikleri](#Çizgi Grafikleri)
-      * [Krom Cevheri İstihsalimiz](#Krom Cevheri İstihsâlimiz)
+    * [Çizgi Grafikleri](#Çizgi-Grafikleri)
+      * [Krom Cevheri İstihsalimiz](#Krom-Cevheri-İstihsâlimiz)
 <!--te-->
 
 ## Kullanılan Kütüphaneler
