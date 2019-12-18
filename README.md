@@ -50,9 +50,13 @@ library(ggplot2)
 1923 - 1937 yılları arasındaki krom cevheri üretimimizi gösteren grafiktir.
 
 Orijinal:
+
 ![Krom Cevheri Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/Krom%20Cevheri.jpg)
+
 Çıktımız:
+
 ![Krom Cevheri İstihsâlimiz](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/KromCevheri.jpeg)
+
 ```R
 Sys.setlocale(locale = "Turkish")
 library(ggplot2)
@@ -98,6 +102,14 @@ ggplot(KromCevheri, aes(tarih,miktar)) + geom_line(size=3.5) +
 
 1932 - 1937 yılları arasındaki şarap satışını gösteren grafiktir.
 
+Orijinal:
+
+![Şarap Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/SarapSatisi.jpg)
+
+Çıktımız:
+
+![Şarap Satışı](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/SarapSatisi.jpeg)
+
 ```R
 Sys.setlocale(locale = "Turkish")
 library(ggplot2)
@@ -136,6 +148,14 @@ ggplot(sarapsatisi, aes(tarih,miktar)) + geom_line(size=1.8) +
 #### Orta Öğretim Öğretmen Okulu Talebe Sayısı
 
 1923 - 1938 yılları arasında orta öğretim seviyesindeki öğretmen okullarında bulunan öğrencilerin sayısını gösteren grafiktir.
+
+Orijinal:
+
+![Talebe Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/TalebeSayisi.jpg)
+
+Çıktımız:
+
+![Talebe Sayısı](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/TalebeSayisi.jpeg)
 
 ```R
 Sys.setlocale(locale = "Turkish")
@@ -190,12 +210,19 @@ ggplot(talebe, aes(tarih,miktar)) + geom_line(size=2) +
   annotate(geom = "text", x = 1935.5, y = 2900, label = "2805", fontface = "bold") +
   annotate(geom = "text", x = 1936.5, y = 2750, label = "2699", fontface = "bold")
   ```
-  
-  ![Talebe Sayısı](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/TalebeSayisi.jpeg)
-  
+   
   #### Trahom Mücadele Teşkilâtı Hastane ve Dispanserler Faaliyeti
   
   1925 - 1937 yılları arasında Trahom hastalığına karşı kurulan hastane ve dispanserlerin faaliyetlerini gösteren grafiktir.
+  
+  Orijinal:
+  
+  ![Trahom Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/TrahomMucadele.jpg)
+  
+  Çıktımız:
+  
+  ![Trahom Mücadele](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/TrahomMucadele.jpeg)
+
   
   ```R
 Sys.setlocale(locale = "Turkish")
@@ -239,11 +266,18 @@ ggplot(trahommucadele, aes(x=tarih)) +
  annotate(geom="text", x=1928.5,y=55000,label="İlaçlananlar  \" ", size= 5, fontface="bold.italic") +
  annotate(geom="text", x=1926,y=55000,label="- - - - ", size= 5, fontface="bold")
   ```
-  ![Trahom Mücadele](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/TrahomMucadele.jpeg)
   
   #### Heybeliada Verem Sanatoryumu Mesaisi
   
   1924 - 1937 yılları arasında Heybeliada Verem Sanatoryumu tarafından yapılan tedavi ve çalışmaları gösteren grafiktir.
+  
+  Orijinal:
+  
+  ![Verem Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/VeremSanatoryumu.jpg)
+  
+  Çıktımız:
+  
+  ![Verem Sanatoryumu](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/VeremSanatoryumu.jpeg)
   
   ```R
 Sys.setlocale(locale = "Turkish")
@@ -286,11 +320,18 @@ ggplot(verem, aes(x=tarih)) +
   annotate(geom="text", x=1928.8,y=560,label="Laboratuvar ve Rontken ", size= 4.7, fontface="bold.italic") +
   annotate(geom="text", x=1926.1,y=560,label="- - - -  ", size= 6, fontface="bold")
   ```
-  ![Verem Sanatoryumu](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/VeremSanatoryumu.jpeg)
   
   #### Duyunu Umumiye ve Devlet İnhisarı Zamanlarındaki Safi İçki Varidatı
   
   1902 - 1937 yılları arasında Duyunu Umumiye ve Devlet İnhisarı (tekeli) zamanlarındaki saf içki gelirini gösteren grafik
+  
+  Orijinal:
+  
+  ![Duyunu Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/DuyunuUmumiye.jpg)
+  
+  Çıktımız:
+  
+  ![Duyunu Umumiye](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/DuyunuUmumiye.jpeg)
   
   ```R
 Sys.setlocale(locale = "Turkish")
@@ -335,11 +376,18 @@ ggplot(duyunu, aes(tarih)) +
   annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6775000, ymax = 6790000, fill = "black" ) +
   annotate(geom="rect", xmin = 1908.5, xmax = 1918.5, ymin = 6745000, ymax = 6760000, fill = "black" )
   ```
-  ![Duyunu Umumiye](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/DuyunuUmumiye.jpeg)
   
   #### Cumhuriyet Devrinde Elektrik Takatının Çoğalışını Gösteren Grafik
   
   1923 - 1943 yılları arasında elektrik miktarını gösteren grafik
+  
+  Orijinal:
+  
+  ![Elektrik Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/Elektrik.jpg)
+  
+  Çıktımız:
+  
+  ![Elektrik](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/Elektrik.jpeg)
   
   ```R
   library(ggplot2)
@@ -381,9 +429,17 @@ ggplot(elektrik) +
   annotate("text", x = 1939.7, y = 184500, label = "KURULACAK", angle = 42.5, size = 6, fontface = "italic") +
   annotate("text", x = 1933.3, y = 0, label = "Y  I   L     L   A  R", size = 9, fontface = "italic", vjust = 1.8)
   ```
-![Elektrik](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/Elektrik.jpeg)
+
 
 #### Yolcu Hayvan ve Yük miktarı
+
+Orijinal:
+
+![Yolcu Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/YolcuAdet.jpg)
+
+Çıktımız:
+
+![Yolcu Hayvan Yük](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/YolcuAdet.jpeg)
 
 ```R
 library(ggplot2)
@@ -426,11 +482,19 @@ ggplot(dataf, aes( x = tarih )) +
   annotate("text", x = 1923, y = 40000, label = "Ton", hjust = 1.6, fontface = "bold", size = 3.6)
 ```
 
-![Yolcu Hayvan Yük](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/YolcuAdet.jpeg)
+
 
 #### Tahsilatın Son Beş Yıllık İnkişaf Seyri
 
 1933 - 1937 yılları arasında tahsilat miktarının gelişimini gösteren grafik
+
+Orijinal:
+
+![Tahsilat Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/tahsilat.jpg)
+
+Çıktımız:
+
+![tahsilat](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/tahsilat.jpeg)
 
 ```R
 library(ggplot2)
@@ -499,11 +563,19 @@ ggplot(tahsilat, aes(x = ay, y = deger ,linetype = grup)) +
         plot.title = element_text(hjust = 0.5, face = "bold"))
 ```
 
-![tahsilat](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/tahsilat.jpeg)
+
 
 #### Sümerbank Fabrikalarının Toptan Satış Endeksi
 
 1930 - 1937 yılları arasında Sümerbank fabrikalarının satışını gösteren grafik
+
+Orijinal:
+
+![Toptan Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Line%20Graphs/Toptan.jpg)
+
+Çıktımız:
+
+![Toptan](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/Toptan.jpeg)
 
 ```R
 library(ggplot2)
@@ -564,13 +636,21 @@ ggplot(toptan, aes(x=tarih)) +
   geom_curve(x=1934.65 , y= 115, xend=1934.5, yend=125, arrow=arrow(length = unit(0.25,"cm")), size=1, color="black", curvature = -0.2)
 ```
 
-![Toptan](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Lines/Toptan.jpeg)
+
 
 ### Bar Grafikleri
 
 #### Belediyelere Ait Hastaneler Mesaisi 
 
 1928 - 1937 yılları arasında devlet hastanelerince yapılan tedavi sayısı
+
+Orijinal:
+
+![Belediye Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/BelediyeHastane.jpg)
+
+Çıktımız:
+
+![Belediye hastane](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/BelediyeHastane.jpeg)
 
 ```R
 Sys.setlocale(locale = "Turkish")
@@ -611,11 +691,19 @@ ggplot(data=data,aes(x=factor(zaman), y=deger, fill=grup, color=grup, alpha=grup
   coord_cartesian(clip = 'off')
 ```
 
-![Belediye hastane](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/BelediyeHastane.jpeg)
+
 
 #### Devlet Frengi Mücadele Teşkilatı Tarafından Tedavi İçin Vilayetlere Gönderilen İlaçlar
 
 1926 - 1937 yılları arasında frengi hastalığına karşı mücadele kapsamında vilayetlere gönderilen ilaç miktarını gösteren grafik
+
+Orijinal:
+
+![Frengi Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/Frengi.jpg)
+
+Çıktımız:
+
+![Frengi Mücadele](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/Frengi.jpeg)
 
 ```R
 library(ggplot2)
@@ -705,11 +793,19 @@ ggplot(frengi, aes(x = zaman, y = deger, fill = grup, color = grup)) +
   annotate("point", x=xlab, y=ylab, size=0.5, colour= "black")
 ```
 
-![Frengi Mücadele](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/Frengi.jpeg)
+
 
 #### Hususi İdarelere Ait Hastaneler Mesaisi
 
 1926 - 1937 yılları arasında özel hastanelerin yaptığı tedavi sayılarını gösteren grafik
+
+Orijinal:
+
+![Hususi Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/Hususi.jpg)
+
+Çıktımız:
+
+![Hususi Hastane](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/Hususi.jpeg)
 
 ```R
 Sys.setlocale(locale = "Turkish")
@@ -760,11 +856,20 @@ ggplot(data=data,aes(x=zaman, y=deger, fill=grup, color=grup, alpha=grup)) +
   guides(fill=guide_legend(keywidth=0.78,keyheight=0.30,default.unit="inch"))
 ```
 
-![Hususi Hastane](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/Hususi.jpeg)
+
 
 #### İşçi ve İşyeri Sayısı
 
 1937 tarihinde Türkiye Cumhuriyeti'ndeki İşçi ve İşyeri sayılarını gösteren grafik
+
+Orijinal:
+
+![İsci Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/Isci.jpg)
+
+Çıktımız:
+
+![İsci](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/Isci.jpeg)
+
 
 ```R
 library(ggplot2)
@@ -884,11 +989,19 @@ ggplot(is, aes(x=iller))+
   annotate("segment", x = 28, xend = 29, y = cizgi28, yend = cizgi28, size = 0.5) 
 ```
 
-![İsci](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/Isci.jpeg)
+
 
 #### İstanbul Çocuk Hastanesinin Mesaisi
 
 1924 - 1937 yılları arasında İstanbul Çocuk Hastanesi'nin tedavi sayılarını gösteren grafik
+
+Orijinal:
+
+![İstanbul çocuk Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/Istanbul%20Cocuk.jpg)
+
+Çıktımız:
+
+![İstanbul Çocuk](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/IstanbulCocuk.jpeg)
 
 ```R
 library(ggplot2)
@@ -935,11 +1048,19 @@ ggplot(cocuk, aes(x = zaman, y = deger, fill = grup, color = grup)) +
   scale_x_continuous(breaks = seq(1924,1937))
 ```
 
-![İstanbul Çocuk](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/IstanbulCocuk.jpeg)
+
 
 #### Merkez Hıfzıssıhha Müessesesi Serum ve Aşı İstihsal ve Sevkiyyatı Faaliyeti
 
 1930 - 1937 yılları arasında günümüzün Refik Saydam Merkez Hıfzıssıhha Enstitüsü kurumunun serum ve aşı üretim ve ulaşım sonuçlarını gösteren grafik
+
+Orijinal:
+
+![Merkez Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/Merkez.jpg)
+
+Çıktımız:
+
+![Merkez](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/Merkez.jpeg)
 
 ```R
 library(ggplot2)
@@ -1015,11 +1136,20 @@ ggplot(merkez, aes(x=zaman,fill = grup1))+
   annotate("segment", x = 1937, xend = 1937.7, y = 350, yend = 350, size = 1)
 ```
 
-![Merkez](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/Merkez.jpeg)
+
 
 #### Numune Hastaneleri Mesaisi
 
 1924 - 1937 tarihleri arasında numune hastanelerinin tedavi sayısını gösteren grafik
+
+Orijinal:
+
+![Numune Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/Numune.jpg)
+
+Çıktımız:
+
+![Numune](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/Numune.jpeg)
+
 
 ```R
 library(ggplot2)
@@ -1072,11 +1202,19 @@ ggplot(numune, aes(x = zaman, y = deger, fill = grup)) +
   scale_x_continuous(breaks = seq(1924,1937), expand = c(0,0.1))
 ```
 
-![Numune](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/Numune.jpeg)
+
 
 #### Sıtma Mücadelesi Laboratuvar Mesaisi
 
 1925 - 1937 yılları arasında sıtma mücadelesi kapsamındaki laboratuvar çalışmasını gösteren grafik
+
+Orijinal:
+
+![Sıtma Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/SitmaMucadelesi.jpg)
+
+Çıktımız:
+
+![Sıtma Mücadele](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/SitmaMucadelesi.jpeg)
 
 ```R
 library(ggplot2)
@@ -1132,11 +1270,20 @@ ggplot(sitma, aes(x = zaman, y = deger, fill = grup, color = grup)) +
   scale_x_continuous(breaks = seq(1925,1937), expand = c(0,0.1))
 ```
 
-![Sıtma Mücadele](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/SitmaMucadelesi.jpeg)
+
 
 #### Yurdun Muhtelif Bölgelerinde Yapılan Tifo Aşısı
 
 1927 - 1937 yılları arasında yurtta yapılan tifo aşısı miktarlarını gösteren grafik
+
+Orijinal:
+
+![Tifo Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/TifoAsi.jpg)
+
+Çıktımız:
+
+![Tifo Aşı](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/TifoAsi.jpeg)
+
 
 ```R
 library(ggplot2)
@@ -1206,11 +1353,21 @@ ggplot(tifo, aes(x = zaman, y = deger, fill = grup)) +
   annotate("segment", x = 1930 + cizgi, xend = 1930 + cizgi, y = 340000, yend = 355000, size = 1)
 ```
 
-![Tifo Aşı](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/TifoAsi.jpeg)
+
 
 #### Trahom Mücadele Teşkilatı Hastane ve Dispanserler Faaliyeti
 
 1925 - 1937 yılları arasında trahom hastalığına karşı hastane ve dispanserlerde yapılan tedavi sayısını gösteren grafik
+
+Orijinal:
+
+![Trahombar Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/TrahomBar.jpg)
+
+Çıktımız:
+
+![Trahom Bar](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/TrahomBar.jpeg)
+
+
 
 ```R
 Sys.setlocale(locale = "Turkish")
@@ -1256,11 +1413,20 @@ ggplot(data=data,aes(x=zaman, y=deger, fill=grup, color=grup, alpha=grup)) +
   guides(fill=guide_legend(keywidth=0.78,keyheight=0.30,default.unit="inch"))
 ```
 
-![Trahom Bar](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/TrahomBar.jpeg)
+
 
 #### Zonguldak Hastanesinin Faaliyeti
 
 1924 - 1937 yılları arasında Zonguldak Hastanesi'nin yaptığı tedavi sayısını gösteren grafik
+
+Orijinal:
+
+![Zonguldak Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/ZonguldakHastane.jpg)
+
+Çıktımız:
+
+![Zonguldak Hastane](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/ZonguldakHastane.jpeg)
+
 
 ```R
 library(ggplot2)
@@ -1306,11 +1472,19 @@ ggplot(zonguldak, aes(x = zaman)) +
   coord_cartesian(clip = 'off')
 ```
 
-![Zonguldak Hastane](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/ZonguldakHastane.jpeg)
+
 
 #### Doğum ve Çocuk Bakım Evleri Faaliyeti
 
 1926 - 1937 tarihleri arasında doğum ve çocuk bakım evlerinin tedavi sayısını gösteren grafik
+
+Orijinal:
+
+![Bakım Orijinal](https://github.com/samirnoff/Rbitirme/blob/master/Original%20Graphs/Bar%20Graphs/bakimevi.jpg)
+
+Çıktımız:
+
+![Bakım Evi](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/bakimevi.jpeg)
 
 ```R
 library(ggplot2)
@@ -1380,4 +1554,4 @@ ggplot(bakimevi, aes(x = tarih, fill = grup1)) +
   annotate("text", x = 1937, y = 2700, label = "O N   B  İ  N  L  E  R", vjust = 4.7, size = 5, fontface = "italic")
 ```
 
-![Bakım Evi](https://github.com/samirnoff/Rbitirme/blob/master/Graphs/Bars/bakimevi.jpeg)
+
