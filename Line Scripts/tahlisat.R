@@ -11,14 +11,14 @@ grup <- rep(c("1933","1934","1935","1936","1937"), each = length(uc))
 tahsilat <- data.frame(ay, deger, grup)
 
 ggplot(tahsilat, aes(x = ay, y = deger ,linetype = grup)) +
-  geom_line(data = subset(tahsilat, grup == "1933"), linetype = "dashed", size = 1) +
-  geom_line(data = subset(tahsilat, grup == "1934"), linetype = "solid", size = 1) +
-  geom_line(data = subset(tahsilat, grup == "1935"), aes(y = deger - 0.7), linetype = "solid") + 
-  geom_line(data = subset(tahsilat, grup == "1935"), aes(y = deger + 0.7), linetype = "solid") +
-  geom_line(data = subset(tahsilat, grup == "1936"), linetype = "longdash", size = 1.2) + 
+  geom_line(data = subset(tahsilat, grup == "1933"), size = 1) +
+  geom_line(data = subset(tahsilat, grup == "1934"), size = 1) +
+  geom_line(data = subset(tahsilat, grup == "1935"), aes(y = deger - 0.7)) + 
+  geom_line(data = subset(tahsilat, grup == "1935"), aes(y = deger + 0.7)) +
+  geom_line(data = subset(tahsilat, grup == "1936"), size = 1.2) + 
     geom_line(data = subset(tahsilat, grup == "1936"), aes(y = deger - 0.7), linetype = "solid") + 
     geom_line(data = subset(tahsilat, grup == "1936"), aes(y = deger + 0.7), linetype = "solid") +
-  geom_line(data = subset(tahsilat, grup == "1937"), linetype = "solid",size = 1.4) +
+  geom_line(data = subset(tahsilat, grup == "1937"),size = 1.4) +
   geom_point(data = subset(tahsilat, grup == "1933"), shape = 21,stroke = 1.5, size = 1.8) +
   geom_point(data = subset(tahsilat, grup == "1934"), shape = 21, stroke = 1.5, size = 1.8) +
   geom_point(data = subset(tahsilat, grup == "1935"), shape = 21, stroke = 1.5, size = 1.8) +
@@ -41,9 +41,18 @@ ggplot(tahsilat, aes(x = ay, y = deger ,linetype = grup)) +
                      limits = c(0,300),
                      expand = c(0,0),
                      sec.axis = dup_axis()) +
+    annotate("text", x = c(0.35,12.67), y = 10, label = "Milyon", fontface = "bold", size = 3.5) +
+  annotate("text", x = c(0.4,12.9), y = 0, label = "Ay", fontface = "bold", vjust = 1.5, size = 4.5) +
+  scale_linetype_manual(values = c("dashed","solid","solid","longdash","solid")) +
+  theme(legend.direction = "horizontal",
+        legend.title = element_blank(),
+        legend.position = c(0.4, -0.2),
+        legend.spacing.x = unit(2.5,"cm"),
+        legend.box = "vertical") +  
+  guides(linetype = guide_legend(label.position = "bottom")) +
   theme(panel.grid.major = element_line(colour = "black", size = 1),
         panel.grid.minor.y = element_line(color = "black", size = 0.7),
-        plot.margin = unit(c(1,0,1,0), "lines"),
+        plot.margin = unit(c(1,0,6,0), "lines"),
         axis.title = element_blank(),
         axis.text.y.left = element_text(size = 11, face = "bold", color = "black", vjust = 0.4, hjust = 2.35),
         axis.text.y.right = element_text(size = 11, face = "bold", color = "black", vjust = 0.4, hjust = -1.32),
@@ -52,6 +61,4 @@ ggplot(tahsilat, aes(x = ay, y = deger ,linetype = grup)) +
         axis.ticks = element_blank(),
         axis.line.y = element_blank(),
         axis.line.x = element_line(size = 1.6),
-        plot.title = element_text(hjust = 0.5, face = "bold")) +
-  annotate("text", x = c(0.35,12.67), y = 10, label = "Milyon", fontface = "bold", size = 3.5) +
-  annotate("text", x = c(0.4,12.9), y = 0, label = "Ay", fontface = "bold", vjust = 1.5, size = 4.5)
+        plot.title = element_text(hjust = 0.5, face = "bold"))
